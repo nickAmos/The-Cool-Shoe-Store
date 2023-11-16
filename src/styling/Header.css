@@ -1,0 +1,119 @@
+
+/* Header CSS containers, flex and titles*/
+#header-container {
+    background-color: rgb(227, 237, 238);
+    width: 100vw;
+    height: 15vh;
+}
+
+#middle-box h1 {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    font-size: 4rem;
+    
+}
+h2 {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 200;
+    font-style: italic;
+    
+}
+
+#navbar {
+    height: 70%;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#scrolling-banner {
+    height: 30%;
+    width: 100%;
+    background-color: rgb(255, 248, 238);
+}
+
+
+#navbar-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    width: 95%;
+    background-color: rgb(255, 255, 255);
+}
+
+#left-box, #middle-box, #right-box {
+    min-height: 30px;
+    height: auto;
+    min-width: 100px;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+}
+
+.icon-container {
+    height: auto;
+    width: auto;
+    cursor: pointer;
+}
+
+/* scrolling banner here 
+change this when making the banner*/
+#scrolling-banner {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#scroll {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+#right-left-middle {
+    position: absolute;
+    width: 100%;
+    text-align: justify;
+    font-size: 1.55rem;
+    animation: RightToLeftMiddle 15s infinite linear; 
+} 
+
+span {
+    display:inline-block;
+    width:100%;
+    /* add this to see how the span spreads the text
+    height:1em;
+    background-color:red; */
+}
+
+#right-left-LHS {
+    position: absolute;
+    width: 100%;
+    text-align: justify;
+    font-size: 1.55rem;
+    translate: 100%;
+    animation: RightToLeftMiddle 15s infinite linear 
+}
+
+
+
+@keyframes RightToLeftMiddle {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+
+
+
+
