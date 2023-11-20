@@ -99,7 +99,8 @@ span {
     text-align: justify;
     font-size: 1.55rem;
     translate: 100%;
-    animation: RightToLeftMiddle 15s infinite linear 
+    animation: RightToLeftMiddle 15s infinite linear;
+    
 }
 
 
