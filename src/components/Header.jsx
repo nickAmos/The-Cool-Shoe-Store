@@ -5,7 +5,9 @@ import Box from '@mui/material/Box';
 import 'semantic-ui-css/semantic.min.css'
 import Modal from '@mui/material/Modal';
 import { useState } from 'react';
-import ConsoleState from './ConsoleState';
+import Filter from './Filter';
+
+
 
 
 
@@ -37,7 +39,6 @@ const [openCart, setOpenCart] = useState(false);
 const handleOpenCart = () => setOpenCart(true);
 const handleCloseCart = () => setOpenCart(false);  
 
-
     return (
         <>
             <div id="header-container">
@@ -49,6 +50,7 @@ const handleCloseCart = () => setOpenCart(false);
                         </div>
                             <Modal open={openFilter} onClose={handleCloseFilter} aria-labelledby="modal-modal-title" aria-describedby="modal-modal-description">  
                                     <Box sx={styleFilter}>
+                                        <Filter/>
                                     </Box> 
                             </Modal> 
                          
@@ -86,7 +88,7 @@ const handleCloseCart = () => setOpenCart(false);
                 </div>
 
             </div>
-            <ConsoleState state={openCart} />
+            
         </>
     )
 }
