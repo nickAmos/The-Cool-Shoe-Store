@@ -13,7 +13,7 @@ import Filter from './Filter';
 
 
 const styleFilter = {
-    position: 'absolute', top: '10%',
+    position: 'absolute', top: '10%', padding: 0,
     width: '22vw', height: '90vh', bgcolor: 'white', border: '2px solid #000', boxShadow: 24, p: 4,
     borderRadius: 5, borderTopLeftRadius: 0, borderBottomLeftRadius: 0
   };
@@ -30,6 +30,12 @@ const styleCart = {
 
 
 function Header() {
+
+const getData = (data) => {
+    
+        console.log(data);
+
+}
 
 const [openFilter, setOpenFilter] = useState(false);
 const handleOpenFilter = () => setOpenFilter(true);
@@ -50,7 +56,7 @@ const handleCloseCart = () => setOpenCart(false);
                         </div>
                             <Modal open={openFilter} onClose={handleCloseFilter} aria-labelledby="modal-modal-title" aria-describedby="modal-modal-description">  
                                     <Box sx={styleFilter}>
-                                        <Filter/>
+                                        <Filter onSubmit={getData}/>
                                     </Box> 
                             </Modal> 
                          

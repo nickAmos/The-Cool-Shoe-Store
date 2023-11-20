@@ -12,3 +12,16 @@ function App() {
 }
 
 export default App;
+
+
+
+/*
+ShoeDisplay component should create a copy of the shoes array and map
+its content to the screen.
+
+The shoes array should be manipulated by a functional component which is
+connected to the filter component.
+
+
+
+*/

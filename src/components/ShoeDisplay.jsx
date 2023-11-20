@@ -1,8 +1,9 @@
 import { shoes } from '../Shoes';
+import '../styling/ShoeDisplay.css'
 
 let ArrayOfShoes = shoes
 
-console.log(shoes[1]["name"]);
+
 
 function ShoeDisplay() {
 
@@ -12,7 +13,7 @@ function ShoeDisplay() {
         {ArrayOfShoes.map((shoe, index) => {
             
                 return (
-                    <div key={index}>
+                    <div id='container' key={index}>
                       <p>{shoe.name}</p>
                       <p>{shoe.brand}</p>
                       <p>{shoe.color}</p>

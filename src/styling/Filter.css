@@ -1,0 +1,28 @@
+
+
+#filter-container {
+    border: red solid 1px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+#red {
+    height: 15px;
+    width: 15px;
+    background-color: red;
+}
+
+#green {
+    height: 15px;
+    width: 15px;
+    background-color: green;
+}
+
+#button-container {
+    display: flex;
+    align-items: center;
+}
