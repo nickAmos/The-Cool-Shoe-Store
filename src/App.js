@@ -1,12 +1,22 @@
+import { useState } from 'react';
 import './App.css';
 import Header from './components/Header';
 import ShoeDisplay from './components/ShoeDisplay';
+import { shoes } from './Shoes';
 
 function App() {
+
+  const [includedShoes, setIncludedShoes] = useState(shoes)
+
+  const getDataApp = (data) => {
+    setIncludedShoes(data);
+    console.log(data);
+  }
+
   return (
     <div className="App">
-      <Header/>
-      <ShoeDisplay/>
+      <Header getDataApp={getDataApp}/>
+      <ShoeDisplay includedShoes={includedShoes}/>
     </div>
   );
 }

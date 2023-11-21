@@ -6,6 +6,7 @@ import 'semantic-ui-css/semantic.min.css'
 import Modal from '@mui/material/Modal';
 import { useState } from 'react';
 import Filter from './Filter';
+import { shoes } from '../Shoes';
 
 
 
@@ -29,11 +30,22 @@ const styleCart = {
 
 
 
-function Header() {
+function Header({getDataApp}) {
+
+const [reset, setResest] = useState(false);
+const [filterslider, setFilterslider] = useState(true);
 
 const getData = (data) => {
     
-        console.log(data);
+        
+        getDataApp(data);
+        if (shoes.length === data.length) {
+            setResest(false);
+            setFilterslider(true);
+        } else {
+            setResest(true);
+            setFilterslider(false);
+        }
 
 }
 
@@ -52,11 +64,16 @@ const handleCloseCart = () => setOpenCart(false);
                     <div id='navbar-flex'>
                         <div id='left-box'>
                         <div className='icon-container' onClick={handleOpenFilter}>
-                            <Icon name='sliders horizontal' size='big'/>
+                            {filterslider ? <Icon name='sliders horizontal' size='big'/> : null}
+                        </div>
+                        <div>
+                        {reset ? <button onClick={() => {
+                            getData(shoes);
+                        }}>reset</button> : null}
                         </div>
                             <Modal open={openFilter} onClose={handleCloseFilter} aria-labelledby="modal-modal-title" aria-describedby="modal-modal-description">  
                                     <Box sx={styleFilter}>
-                                        <Filter onSubmit={getData}/>
+                                        <Filter onSubmit={getData} onClose={handleCloseFilter}/>
                                     </Box> 
                             </Modal> 
                          
@@ -83,11 +100,11 @@ const handleCloseCart = () => setOpenCart(false);
                 <div id='scrolling-banner'>
                     <div id='scroll'>
                         <div id='right-left-middle'>
-                            Huge summer sale on nike adidias and others omg incrediBLEE!, so many sales its crazyyyyyyy, like go and guy some shoes my guuy.
+                            I am literally so good at chess its insane, i dont lose, i play kings indian and i cannot lose because my position is so good, my late game tactics are also very clutch
                             <span></span>
                         </div>
                         <div id='right-left-LHS'>
-                            Huge summer sale on nike adidias and others omg incrediBLEE!, so many sales its crazyyyyyyy, like go and guy some shoes my guuy.
+                            I am literally so good at chess its insane, i dont lose, i play kings indian and i cannot lose because my position is so good, my late game tactics are also very clutch
                             <span></span>
                         </div>
                     </div>

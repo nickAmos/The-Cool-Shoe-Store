@@ -2,6 +2,7 @@
 
 #filter-container {
     border: red solid 1px;
+    background-color: rgb(255, 255, 255);
     width: 100%;
     height: 100%;
     display: flex;
@@ -25,4 +26,8 @@
 #button-container {
     display: flex;
     align-items: center;
+}
+
+#flex-child-buttons {
+    display: flex;
 }

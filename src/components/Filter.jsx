@@ -1,9 +1,10 @@
 import { shoes } from "../Shoes";
-import { useState} from "react";
+import { useEffect, useState} from "react";
 import '../styling/Filter.css';
+import { Button } from 'semantic-ui-react';
 
 
-export default function Filter({onSubmit}) {
+export default function Filter({onSubmit, onClose}) {
 
   const handleSubmit = (data) => {
     onSubmit(data);
@@ -13,6 +14,30 @@ export default function Filter({onSubmit}) {
     const [brand, setBrand] = useState(null);
     const [type, setType] = useState(null);
     const [maxPrice, setMaxPrice] = useState(null);
+
+    const [nikeColor, setNikeColor] = useState('black')
+    const [adidasColor, setAdidasColor] = useState('black')
+    const [saucanyColor, setSaucanyColor] = useState('black')
+
+  useEffect(() => {
+    if (brand === 'Nike') {
+      setNikeColor('green')
+    }else {
+        setNikeColor('black');
+      }
+
+    if (brand === 'Saucany') {
+      setSaucanyColor('green');
+    } else {
+      setSaucanyColor('black');
+    }
+
+     if (brand === 'Adidas') {
+      setAdidasColor('green');
+    } else {
+      setAdidasColor('black');
+    }
+  },[brand])
 
     const filterShoes = (brand, color, maxPrice) => {
       let filtered = shoes;
@@ -44,24 +69,24 @@ export default function Filter({onSubmit}) {
       
         <div id="filter-container">
 
-          <div id="flex-child">
+          <div id="flex-child-buttons">
             <div id="button-container">
-                <button  onClick={() => {setBrand("Nike")}}>Set nike</button>
-                {brand === 'Nike' ? <div id="green"></div> : <div id="red"></div>}
+                <Button basic color={nikeColor}  onClick={() => {setBrand("Nike")}}>Nike</Button>
+                
             </div>
 
             <div id="button-container">
-              <button onClick={() => {
+              <Button basic color={adidasColor} onClick={() => {
                   setBrand("Adidas");
-              }}>Set Adidas </button>
-              {brand === 'Adidas' ? <div id="green"></div> : <div id="red"></div>}
+              }}>Adidas </Button>
+              
             </div>
 
             <div id="button-container">
-              <button onClick={() => {
+              <Button basic color={saucanyColor} onClick={() => {
                   setBrand("Saucany");
-              }}>Set Saucany </button>
-              {brand === 'Saucany' ? <div id="green"></div> : <div id="red"></div>}
+              }}>Saucany </Button>
+              
             </div>
         </div>
 
@@ -70,11 +95,19 @@ export default function Filter({onSubmit}) {
         </div>
 
         <div id="flex-child">
-          <button onClick={() => { setType("Daily Trainer")}}>Daily Trainer</button>
-          <button onClick={() => { setType("Race Shoe")}}>Race Shoe</button>
+          <div id="button-container">
+              <button onClick={() => { setType("Daily Trainer")}}>Daily Trainer</button>
+              
+          </div>
+          <div id="button-container">
+            <button onClick={() => { setType("Race Shoe")}}>Race Shoe</button>
+
+          </div>
         </div>
 
-        <button  onClick={() => {filterShoes(brand, type, maxPrice)}}>Filter</button>
+        <button  onClick={() => {filterShoes(brand, type, maxPrice)
+        onClose();
+        }}>Filter</button>
         </div>
         
     )

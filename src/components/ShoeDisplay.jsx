@@ -1,11 +1,12 @@
-import { shoes } from '../Shoes';
+
 import '../styling/ShoeDisplay.css'
 
-let ArrayOfShoes = shoes
 
 
 
-function ShoeDisplay() {
+
+function ShoeDisplay({includedShoes}) {
+  let ArrayOfShoes = includedShoes
 
     return(
         
@@ -16,7 +17,7 @@ function ShoeDisplay() {
                     <div id='container' key={index}>
                       <p>{shoe.name}</p>
                       <p>{shoe.brand}</p>
-                      <p>{shoe.color}</p>
+                      <p>{shoe.type}</p>
                       <p>{shoe.price}</p>
                     </div>
                   )
