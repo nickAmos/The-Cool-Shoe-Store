@@ -1,6 +1,6 @@
 import '../styling/Header.css'
 import 'semantic-ui-css/semantic.min.css'
-import { Icon } from 'semantic-ui-react';
+import { Icon, Button } from 'semantic-ui-react';
 import Box from '@mui/material/Box';
 import 'semantic-ui-css/semantic.min.css'
 import Modal from '@mui/material/Modal';
@@ -67,9 +67,9 @@ const handleCloseCart = () => setOpenCart(false);
                             {filterslider ? <Icon name='sliders horizontal' size='big'/> : null}
                         </div>
                         <div>
-                        {reset ? <button onClick={() => {
+                        {reset ? <Button circular compact color='black' onClick={() => {
                             getData(shoes);
-                        }}>reset</button> : null}
+                        }}>reset</Button> : null}
                         </div>
                             <Modal open={openFilter} onClose={handleCloseFilter} aria-labelledby="modal-modal-title" aria-describedby="modal-modal-description">  
                                     <Box sx={styleFilter}>

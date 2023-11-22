@@ -33,7 +33,8 @@ h2 {
 #scrolling-banner {
     height: 30%;
     width: 100%;
-    background-color: rgb(255, 248, 238);
+    background-color: rgba(0, 0, 0, 0.835);
+    border: solid black 1px;
 }
 
 
@@ -76,14 +77,19 @@ change this when making the banner*/
     width: 100%;
     display: flex;
     align-items: center;
+    justify-content: center;
     position: relative;
+    padding-top: 20px;
 }
 
 #right-left-middle {
     position: absolute;
     width: 100%;
     text-align: justify;
-    font-size: 1.55rem;
+    font-size: 1.4rem;
+    color: rgb(145, 192, 246);
+    font-family: 'DotGothic16', sans-serif;
+    font-weight: 200;
     animation: RightToLeftMiddle 15s infinite linear; 
 } 
 
@@ -98,9 +104,11 @@ span {
 #right-left-LHS {
     position: absolute;
     width: 100%;
+    font-family: 'DotGothic16', sans-serif;
     text-align: justify;
-    font-size: 1.55rem;
+    font-size: 1.4rem;
     translate: 100%;
+    color: rgb(145, 192, 246);
     animation: RightToLeftMiddle 15s infinite linear;
     
 }
