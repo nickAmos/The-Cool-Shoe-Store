@@ -1,5 +1,6 @@
 
 import '../styling/ShoeDisplay.css'
+import Shoe from './Shoe'
 
 
 
@@ -11,20 +12,18 @@ function ShoeDisplay({includedShoes}) {
     return(
         
         <>
-        {ArrayOfShoes.map((shoe, index) => {
-            
+
+        <div id='display-container'>
+          <div class='grid-container'>
+              {ArrayOfShoes.map((shoe, index) => {
                 return (
-                    <div id='container' key={index}>
-                      <p>{shoe.name}</p>
-                      <p>{shoe.brand}</p>
-                      <p>{shoe.type}</p>
-                      <p>{shoe.price}</p>
+                    <div class='grid-item' id='container' key={index}>
+                      <Shoe shoe={shoe} index={index}/>
                     </div>
-                  )
-                
-            
-       
-      })}
+                    )})}
+        </div>
+
+      </div>
         </>
     )
 }
