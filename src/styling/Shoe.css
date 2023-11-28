@@ -35,10 +35,13 @@
 
 img {
     aspect-ratio: auto;
-    width: 45px;
+
 }
 
 #brandLogo {
+    width: 85px;
+    display: flex;
+    justify-content: flex-end;
     padding-right: 5px;
 }
 

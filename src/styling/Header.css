@@ -33,7 +33,7 @@ h2 {
 #scrolling-banner {
     height: 30%;
     width: 100%;
-    background-color: rgba(36, 36, 36, 0.835);
+    background-color: rgb(221, 248, 253);
     
 }
 
@@ -82,14 +82,14 @@ change this when making the banner*/
     padding-top: 20px;
 }
 
-#right-left-middle {
+#right-left-middle, #right-left-LHS {
     position: absolute;
     width: 100%;
     text-align: justify;
-    font-size: 1.4rem;
-    color: rgb(145, 192, 246);
+    font-size: 1.7rem;
+    color: rgb(0, 0, 0);
     font-family: 'DotGothic16', sans-serif;
-    font-weight: 200;
+    
     animation: RightToLeftMiddle 15s infinite linear; 
 } 
 
@@ -102,15 +102,7 @@ span {
 }
 
 #right-left-LHS {
-    position: absolute;
-    width: 100%;
-    font-family: 'DotGothic16', sans-serif;
-    text-align: justify;
-    font-size: 1.4rem;
     translate: 100%;
-    color: rgb(145, 192, 246);
-    animation: RightToLeftMiddle 15s infinite linear;
-    
 }
 
 

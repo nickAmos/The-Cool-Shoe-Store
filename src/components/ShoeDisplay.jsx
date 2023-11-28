@@ -6,7 +6,8 @@ import Shoe from './Shoe'
 
 
 
-function ShoeDisplay({includedShoes}) {
+function ShoeDisplay({includedShoes, changeShoe}) {
+
   let ArrayOfShoes = includedShoes
 
     return(
@@ -18,7 +19,7 @@ function ShoeDisplay({includedShoes}) {
               {ArrayOfShoes.map((shoe, index) => {
                 return (
                     <div class='grid-item' id='container' key={index}>
-                      <Shoe shoe={shoe} index={index}/>
+                      <Shoe changeShoe={changeShoe} shoe={shoe} index={index}/>
                     </div>
                     )})}
         </div>

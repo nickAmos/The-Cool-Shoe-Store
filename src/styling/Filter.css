@@ -17,18 +17,6 @@
     align-items: center;
 }
 
-#red {
-    height: 15px;
-    width: 15px;
-    background-color: red;
-}
-
-#green {
-    height: 15px;
-    width: 15px;
-    background-color: green;
-}
-
 #button-container {
     display: flex;
     align-items: center;

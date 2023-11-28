@@ -1,6 +1,6 @@
-import { Placeholder } from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
 import '../styling/Shoe.css';
-export default function Shoe({shoe, index}) {
+export default function Shoe({shoe, changeShoe}) {
 
     /*index is the position of the shoe in the display array
     Note: when a filter is applied to the display array shoes will
@@ -13,21 +13,27 @@ let src = '';
 // put custom style tags in below <img> so that each logo is sized coorect
 
 if (shoe.brand === 'Nike') {
-    src = <img src={require('../Images/NikeTickR.png')} alt='brandlogo' />
+    src = <img style={{height: 20}} src={require('../Images/NikeTickR.png')} alt='brandlogo' />
 } else if (shoe.brand === 'Adidas') {
-    src = <img src={require('../Images/adidas.jpeg')} alt='brandlogo' />
+    src = <img style={{width: 50}} src={require('../Images/adidasStretch.png')} alt='brandlogo' />
 
 } else if (shoe.brand === 'Saucany') {
-    src = <img src={require('../Images/Saucony.png')} alt='brandlogo' />
+    src = <img style={{height: 15}} src={require('../Images/Saucony.png')} alt='brandlogo' />
+}
+
+const handleClick = () => {
+    changeShoe([shoe.name, shoe.type, shoe.price])
+    //currently pass it as an array. 
 }
 
 
-
     return(
-        <div id='container-shoe'>
+        <div id='container-shoe' onClick={() => {handleClick()}}>
+            <Link to='/SelectedShoe'>
             <div id="image-placeholder">
                 <p>{placholder}</p>
             </div>
+            </Link>
             <div id='nameAndBrand'>
                 <div id='shoeName'><p>{shoe.name}</p></div>
                 <div id='brandLogo'>{src}</div>

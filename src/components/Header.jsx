@@ -100,11 +100,11 @@ const handleCloseCart = () => setOpenCart(false);
                 <div id='scrolling-banner'>
                     <div id='scroll'>
                         <div id='right-left-middle'>
-                            I am literally so good at chess its insane, i dont lose, i play kings indian and i cannot lose because my position is so good, my late game tactics are also very clutch
+                            I am literally so good at chess its insane, i dont lose, i play kings indian and i cannot lose because my position is so good
                             <span></span>
                         </div>
                         <div id='right-left-LHS'>
-                            I am literally so good at chess its insane, i dont lose, i play kings indian and i cannot lose because my position is so good, my late game tactics are also very clutch
+                            I am literally so good at chess its insane, i dont lose, i play kings indian and i cannot lose because my position is so good
                             <span></span>
                         </div>
                     </div>

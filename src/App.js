@@ -1,22 +1,34 @@
-import { useState } from 'react';
+
 import './App.css';
-import Header from './components/Header';
-import ShoeDisplay from './components/ShoeDisplay';
-import { shoes } from './Shoes';
+import Home from './components/Home';
+import { Route, Routes} from "react-router-dom";
+import SelectedShoe from './components/SelectedShoe';
+import { useState } from 'react';
+
 
 function App() {
 
-  const [includedShoes, setIncludedShoes] = useState(shoes)
-
   const getDataApp = (data) => {
-    setIncludedShoes(data);
+    
     console.log(data);
+  }
+
+  const [selectedShoe, setSelectedShoe] = useState(null);
+
+
+
+  const changeShoe = (shoe) => {
+    console.log(shoe);
+    setSelectedShoe(shoe);
   }
 
   return (
     <div className="App">
-      <Header getDataApp={getDataApp}/>
-      <ShoeDisplay includedShoes={includedShoes}/>
+      <Routes>
+        <Route  path='/' element={<Home changeShoe={changeShoe} getDataApp={getDataApp}/>}/>
+        <Route path='/selectedShoe' element={<SelectedShoe shoe={selectedShoe}/>} />
+      </Routes>
+
     </div>
   );
 }

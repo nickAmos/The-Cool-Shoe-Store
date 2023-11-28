@@ -24,19 +24,19 @@ export default function Filter({onSubmit, onClose}) {
 
   useEffect(() => {
     if (brand === 'Nike') {
-      setNikeColor('green')
+      setNikeColor('teal')
     }else {
         setNikeColor('black');
       }
 
     if (brand === 'Saucany') {
-      setSaucanyColor('green');
+      setSaucanyColor('teal');
     } else {
       setSaucanyColor('black');
     }
 
      if (brand === 'Adidas') {
-      setAdidasColor('green');
+      setAdidasColor('teal');
     } else {
       setAdidasColor('black');
     }
@@ -44,13 +44,13 @@ export default function Filter({onSubmit, onClose}) {
 
   useEffect(() => {
     if (type === 'Daily Trainer') {
-      setDailyColor('green')
+      setDailyColor('teal')
     }else {
         setDailyColor('black');
       }
 
     if (type === 'Race Shoe') {
-      setRaceColor('green');
+      setRaceColor('teal');
     } else {
       setRaceColor('black');
     }
