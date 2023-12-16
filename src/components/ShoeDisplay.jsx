@@ -15,6 +15,8 @@ function ShoeDisplay({includedShoes, changeShoe}) {
         <>
 
         <div id='display-container'>
+
+          {ArrayOfShoes.length > 0 ? 
           <div class='grid-container'>
               {ArrayOfShoes.map((shoe, index) => {
                 return (
@@ -22,7 +24,9 @@ function ShoeDisplay({includedShoes, changeShoe}) {
                       <Shoe changeShoe={changeShoe} shoe={shoe} index={index}/>
                     </div>
                     )})}
-        </div>
+        </div> : null}
+
+        {ArrayOfShoes.length === 0 ? <div>no shoes found</div> : null}
 
       </div>
         </>

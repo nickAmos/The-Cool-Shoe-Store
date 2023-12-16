@@ -22,7 +22,8 @@ if (shoe.brand === 'Nike') {
 }
 
 const handleClick = () => {
-    changeShoe([shoe.name, shoe.type, shoe.price])
+    changeShoe(shoe)
+    //changeShoe([shoe.name, shoe.type, shoe.price])
     //currently pass it as an array. 
 }
 
