@@ -3,30 +3,41 @@ import './App.css';
 import Home from './components/Home';
 import { Route, Routes} from "react-router-dom";
 import SelectedShoe from './components/SelectedShoe';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import Checkout from './components/Checkout';
 
 
 function App() {
 
   const getDataApp = (data) => {
     
-    console.log(data);
+    
   }
 
   const [selectedShoe, setSelectedShoe] = useState(null);
+  const [cart, setCart] = useState([]);
+
+  const pushCart = (shoe) => {
+    setCart([...cart, shoe]);
+  }
 
 
 
   const changeShoe = (shoe) => {
-    console.log(shoe);
+   
     setSelectedShoe(shoe);
   }
+
+  useEffect(() => {
+    console.log(cart);
+  }, [cart])
 
   return (
     <div className="App">
       <Routes>
-        <Route  path='/' element={<Home changeShoe={changeShoe} getDataApp={getDataApp}/>}/>
-        <Route path='/selectedShoe' element={<SelectedShoe shoe={selectedShoe}/>} />
+        <Route  path='/' element={<Home cart={cart} pushCart={pushCart} changeShoe={changeShoe} getDataApp={getDataApp}/>}/>
+        <Route path='/selectedShoe' element={<SelectedShoe pushCart={pushCart} cart={cart} shoe={selectedShoe}/>} />
+        <Route path='/checkout' element={<Checkout/>}/>
       </Routes>
 
     </div>

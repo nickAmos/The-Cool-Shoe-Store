@@ -60,17 +60,35 @@
     width: 50px;
 }
 
+#shopping-trolley {
+    padding-top: 10px;
+    padding-left: 0px;
+    
+}
+
+#cartcounter {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
 #checkout-div {
     width: 250px;
-    display: inline-block;
+    height: 50px;
 }
 
 #checkout-div p {
     font-size: 1.5rem;
 }
+#checkout-button {
+    width: 100px;
+}
 
 #button-div {
     text-align: center;
+}
+
+#size-button {
+    height: 75px;
 }
 
 #size-header {
@@ -122,4 +140,29 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+#checkout-flex-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+}
+
+#add-container {
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background-color: rgb(255, 255, 255);
+}
+
+#continue-shopping {
+    height: 60px;
+}
+
+#twobutton-container {
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between
 }

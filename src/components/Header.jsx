@@ -7,6 +7,7 @@ import Modal from '@mui/material/Modal';
 import { useState } from 'react';
 import Filter from './Filter';
 import { shoes } from '../Shoes';
+import { Link } from 'react-router-dom';
 
 
 
@@ -30,7 +31,7 @@ const styleCart = {
 
 
 
-function Header({getDataApp}) {
+function Header({getDataApp, cart}) {
 
 const [reset, setResest] = useState(false);
 const [filterslider, setFilterslider] = useState(true);
@@ -90,6 +91,18 @@ const handleCloseCart = () => setOpenCart(false);
                             </div>
                             <Modal open={openCart} onClose={handleCloseCart} aria-labelledby="modal-modal-title" aria-describedby="modal-modal-description">  
                                     <Box sx={styleCart}>
+                                    
+                                        {cart.map((shoe, index) => {
+                                            return (
+                                                <div key={index}>
+                                                <p>{shoe.name} size: {shoe.size}</p>
+                                                </div> 
+                                            )})}
+
+
+                                        <Link to='/checkout'>
+                                            <Button compact circular black>Checkout</Button>
+                                        </Link>
 
                                     </Box> 
                             </Modal>

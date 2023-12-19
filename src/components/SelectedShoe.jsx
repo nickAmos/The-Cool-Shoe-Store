@@ -3,7 +3,7 @@ import '../styling/SelectedShoe.css';
 import { Button, Icon } from 'semantic-ui-react';
 import { useEffect, useState } from 'react';
 
-export default function SelectedShoe({shoe}) {
+export default function SelectedShoe({shoe, pushCart, cart}) {
 
 
 
@@ -120,8 +120,6 @@ useEffect(() => {
         
     }  else setColor135('black');
 
-
-    console.log(shoeSize);
 
 }, [shoeSize])
 const handlesizechange = (num) => {
@@ -243,7 +241,10 @@ const handlesizechange = (num) => {
 
 function loader() {
     setLoading(true);
+
     setTimeout(() => {
+        copyShoe.size = shoeSize;
+        pushCart(copyShoe);
         setLoading(false);
     },3000)
 }
@@ -251,7 +252,9 @@ function loader() {
     return(
         <>
         <div id='micro-header'>
-
+            <Link to='/'>
+                <Button circular compact color='white'>Home</Button>
+            </Link>
         </div>
         <div id='main-section'>
             <div id='main-flex-container'>
@@ -289,7 +292,41 @@ function loader() {
                     <div id='characteristic-buttons'><p>${shoe.price}.00 AUD</p></div>
                     <div id='description'><p>{shoe.description}</p></div>
                     <div id='checkout'>
-                        <Button size='massive' disabled={!shoeSize} loading={loading} onClick={() => loader()} >{shoeSize > 0 ? <div id='checkout-div'><p>Add size: {shoeSize} to cart</p></div> : <div id='checkout-div'><p><Icon name='caret square left outline'/>Select size</p></div>}</Button>
+                        <div id='checkout-flex-container'>
+                            <div id='add-container'>
+                                <Button id='size-button' size='massive' disabled={!shoeSize} loading={loading} onClick={() => loader()} >{shoeSize > 0 ? <div id='checkout-div'><p>Add size: {shoeSize} to cart</p></div> : <div id='checkout-div'><p><Icon name='caret square left outline'/>Select size</p></div>}</Button>
+                            </div>
+
+                            <div id='twobutton-container'>
+
+                            <div>
+                                <Link to='/'>
+                                <Button id="continue-shopping" basic color='black'>Continue shopping</Button>
+                                </Link>
+                            </div>
+
+                            <div>
+                                <Link to='/checkout'>
+                                    <Button basic color='black' animated='vertical'>
+                                        <div id='checkout-button'>
+                                            <Button.Content visible>
+                                            <Icon.Group>
+                                                <Icon size='big' color='black' id='shopping-trolley' name='shop'/>
+                                                <Icon corner='top right'><Button id='cartcounter' circular compact color='black' size='mini' >{cart.length}</Button></Icon>
+                                            </Icon.Group>
+                                            </Button.Content>
+                                            
+                                            <Button.Content hidden>
+                                                <p>Checkout</p>
+                                            </Button.Content>
+                                            
+                                        </div>
+                                    </Button>
+                                </Link>
+                            </div>
+
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
