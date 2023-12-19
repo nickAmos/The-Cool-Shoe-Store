@@ -9,18 +9,20 @@ import Checkout from './components/Checkout';
 
 function App() {
 
-  const getDataApp = (data) => {
-    
-    
-  }
+ 
 
-  const [selectedShoe, setSelectedShoe] = useState(null);
+  const [selectedShoe, setSelectedShoe] = useState([]);
   const [cart, setCart] = useState([]);
 
   const pushCart = (shoe) => {
     setCart([...cart, shoe]);
   }
 
+  const filterCart = (id) => {
+    setCart(currentShoes => {
+      return currentShoes.filter(shoe => shoe.id !== id);
+    })
+  }
 
 
   const changeShoe = (shoe) => {
@@ -29,15 +31,15 @@ function App() {
   }
 
   useEffect(() => {
-    console.log(cart);
-  }, [cart])
+    console.log(selectedShoe);
+  }, [selectedShoe])
 
   return (
     <div className="App">
       <Routes>
-        <Route  path='/' element={<Home cart={cart} pushCart={pushCart} changeShoe={changeShoe} getDataApp={getDataApp}/>}/>
+        <Route  path='/' element={<Home cart={cart} pushCart={pushCart} changeShoe={changeShoe} />}/>
         <Route path='/selectedShoe' element={<SelectedShoe pushCart={pushCart} cart={cart} shoe={selectedShoe}/>} />
-        <Route path='/checkout' element={<Checkout/>}/>
+        <Route path='/checkout' element={<Checkout cart={cart} filterCart={filterCart}/>}/>
       </Routes>
 
     </div>

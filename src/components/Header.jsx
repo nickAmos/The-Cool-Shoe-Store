@@ -58,6 +58,7 @@ const [openCart, setOpenCart] = useState(false);
 const handleOpenCart = () => setOpenCart(true);
 const handleCloseCart = () => setOpenCart(false);  
 
+
     return (
         <>
             <div id="header-container">
@@ -87,7 +88,12 @@ const handleCloseCart = () => setOpenCart(false);
                         </div>
                         <div id='right-box'>
                             <div className='icon-container' onClick={handleOpenCart}>
-                            <Icon name="cart" size='big'/>
+                                <Button.Content visible>
+                                                <Icon.Group>
+                                                    <Icon size='big' color='black' id='shopping-trolley' name='shop'/>
+                                                    <Icon corner='top right'><Button id='cartcounter' circular compact color='black' size='mini' >{cart.length}</Button></Icon>
+                                                </Icon.Group>
+                                </Button.Content>
                             </div>
                             <Modal open={openCart} onClose={handleCloseCart} aria-labelledby="modal-modal-title" aria-describedby="modal-modal-description">  
                                     <Box sx={styleCart}>

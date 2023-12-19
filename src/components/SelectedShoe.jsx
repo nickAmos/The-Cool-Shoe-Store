@@ -7,7 +7,7 @@ export default function SelectedShoe({shoe, pushCart, cart}) {
 
 
 
-    let copyShoe = shoe;
+    
 
     const [color6, setColor6] = useState('black');
     const [color65, setColor65] = useState('black');
@@ -239,14 +239,32 @@ const handlesizechange = (num) => {
     }
 }
 
+const [trolleyColor, setTrolleyColor] = useState('black');
+
+
+function addToCart() {
+    let uniqueshoe = {...shoe, id: crypto.randomUUID()}
+    console.log(uniqueshoe);
+    pushCart(uniqueshoe);
+}
+
 function loader() {
+
+    addToCart();
+
     setLoading(true);
 
     setTimeout(() => {
-        copyShoe.size = shoeSize;
-        pushCart(copyShoe);
         setLoading(false);
-    },3000)
+    },1000)
+
+    setTimeout(() => {
+        setTrolleyColor('orange');
+    },1000 )
+    setTimeout(() => {
+        setTrolleyColor('black');
+    },1700 )
+
 }
 
     return(
@@ -307,12 +325,12 @@ function loader() {
 
                             <div>
                                 <Link to='/checkout'>
-                                    <Button basic color='black' animated='vertical'>
+                                    <Button basic color={trolleyColor} animated='vertical'>
                                         <div id='checkout-button'>
                                             <Button.Content visible>
                                             <Icon.Group>
-                                                <Icon size='big' color='black' id='shopping-trolley' name='shop'/>
-                                                <Icon corner='top right'><Button id='cartcounter' circular compact color='black' size='mini' >{cart.length}</Button></Icon>
+                                                <Icon size='big'  id='shopping-trolley' name='shop'/>
+                                                <Icon corner='top right'><Button id='cartcounter' circular compact color='orange' size='mini' >{cart.length}</Button></Icon>
                                             </Icon.Group>
                                             </Button.Content>
                                             
@@ -332,12 +350,6 @@ function loader() {
             </div>
     
         </div>
-        <p>{copyShoe.brand}</p>
-        <p>{copyShoe.name}</p>
-        <p>{copyShoe.price}</p>
-        <Link to='/'>
-            <div>return</div>
-        </Link>
         </>
     )
 }
