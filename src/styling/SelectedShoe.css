@@ -15,14 +15,14 @@
 #main-flex-container {
     width: 60vw;
     height: 60vh;
-    background-color: coral;
     display: flex;
+    border: solid black 1px;
 }
 
 #image-section, #description-section {
     width: 50%;
     height: 100%;
-    border: solid black 1px;
+    
 }
 
 #image-section {
@@ -37,19 +37,49 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: aquamarine;
+    border-bottom: solid black 1px;
+    border-right: solid black 1px;
+   
 }
 
 #size-selection {
     width: 100%;
     height:40%;
-    background-color: rgb(127, 197, 255);
+    background-color: rgb(255, 255, 255);
+    border-right: solid black 1px;
 }
 
 #grid-container-size {
     display: grid;
+    height: 80%;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
     grid-template-columns: auto auto auto auto;
 }
+#button-div p {
+    width: 50px;
+}
+
+#checkout-div {
+    width: 250px;
+    display: inline-block;
+}
+
+#checkout-div p {
+    font-size: 1.5rem;
+}
+
+#button-div {
+    text-align: center;
+}
+
+#size-header {
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 
 #description-section {
     display: flex;
@@ -57,18 +87,39 @@
 }
 #shoe-name {
     height: 10%;
-    background-color: rgb(244, 173, 173);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
 }
+
+#shoe-name h1 {
+    padding-top: 10px;
+    padding-left: 5px;
+}
+
 #characteristic-buttons {
     height: 10%;
-    background-color: rgb(211, 250, 166);
+    display: flex;
+    align-items: center;
+   
 }
+#characteristic-buttons p {
+    font-size: 1.3rem;
+}
+
 #description {
     height: 40%;
-    background-color: rgb(187, 218, 202);
+    
+}
+#description p {
+    font-size: 1.2rem;
 }
 
 #checkout {
     height: 40%;
-    background-color: whitesmoke;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

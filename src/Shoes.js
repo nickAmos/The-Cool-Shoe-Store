@@ -12,7 +12,8 @@ export const shoes = [
         src: 'test//img',
         color: "black",
         price: 500,
-        type: 'Race Shoe'
+        type: 'Race Shoe',
+        description: 'Step into the future of running with the Nike AlphaFly—a pinnacle of performance innovation designed to elevate your speed and comfort. Engineered with precision and powered by cutting-edge technology, the AlphaFly is a testament to Nikes commitment to pushing the boundaries of athletic achievement.'
     },
     {name: "Nike TEST shoe",
         brand: "Nike",
