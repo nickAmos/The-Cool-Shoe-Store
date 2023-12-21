@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { shoes } from '../Shoes';
 
 
-export default function Home({changeShoe, cart}) {
+export default function Home({changeShoe, cart, filterCart, subtotal}) {
 
     const [includedShoes, setIncludedShoes] = useState(shoes)
 
@@ -15,7 +15,7 @@ export default function Home({changeShoe, cart}) {
 
     return (
         <>
-        <Header cart={cart} getDataApp={getDataApp}/>
+        <Header cart={cart} getDataApp={getDataApp} filterCart={filterCart} subtotal={subtotal}/>
         <ShoeDisplay changeShoe={changeShoe} includedShoes={includedShoes} getDataApp/>
         </>
     )

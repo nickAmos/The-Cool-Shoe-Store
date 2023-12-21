@@ -12,7 +12,7 @@ export default function Checkout({cart, filterCart}) {
     return (
         <div key={index}>
         <p>{shoe.name} size: {shoe.size} id:{shoe.id}</p>
-        <button onClick={() => filterCart(shoe.id, shoe.size)}>clear</button>
+        <button onClick={() => filterCart(shoe.id)}>clear</button>
         </div> )})}
             
                  </div>

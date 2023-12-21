@@ -243,7 +243,7 @@ const [trolleyColor, setTrolleyColor] = useState('black');
 
 
 function addToCart() {
-    let uniqueshoe = {...shoe, id: crypto.randomUUID()}
+    let uniqueshoe = {...shoe, id: crypto.randomUUID(), size: shoeSize}
     console.log(uniqueshoe);
     pushCart(uniqueshoe);
 }

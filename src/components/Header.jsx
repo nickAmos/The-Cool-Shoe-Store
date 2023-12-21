@@ -8,6 +8,7 @@ import { useState } from 'react';
 import Filter from './Filter';
 import { shoes } from '../Shoes';
 import { Link } from 'react-router-dom';
+import CartDisplay from './CartDisplay';
 
 
 
@@ -31,7 +32,7 @@ const styleCart = {
 
 
 
-function Header({getDataApp, cart}) {
+function Header({getDataApp, cart, filterCart, subtotal}) {
 
 const [reset, setResest] = useState(false);
 const [filterslider, setFilterslider] = useState(true);
@@ -97,18 +98,19 @@ const handleCloseCart = () => setOpenCart(false);
                             </div>
                             <Modal open={openCart} onClose={handleCloseCart} aria-labelledby="modal-modal-title" aria-describedby="modal-modal-description">  
                                     <Box sx={styleCart}>
-                                    
-                                        {cart.map((shoe, index) => {
-                                            return (
-                                                <div key={index}>
-                                                <p>{shoe.name} size: {shoe.size}</p>
-                                                </div> 
-                                            )})}
+                                        <div id='cart-container'>
+                                        <div id='cartdisplay-container'>
+                                            <CartDisplay cart={cart} filterCart={filterCart}/>
+                                        </div>
 
+                                        <div id='checkout-container'>
+                                            <Link to='/checkout'>
+                                                <Button compact circular black>Checkout</Button>
+                                                <p>{subtotal}</p>
+                                            </Link>
+                                        </div>
 
-                                        <Link to='/checkout'>
-                                            <Button compact circular black>Checkout</Button>
-                                        </Link>
+                                        </div>
 
                                     </Box> 
                             </Modal>

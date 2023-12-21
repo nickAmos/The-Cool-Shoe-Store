@@ -105,6 +105,28 @@ span {
     translate: 100%;
 }
 
+#cart-container {
+    border: 1px black solid;
+    height: 100%;
+    position: relative;
+}
+
+#checkout-container {
+    position: absolute;
+    bottom: 0;
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: aqua;
+}
+
+#cartdisplay-container {
+    overflow-y: auto;
+
+    height: 90%;
+}
+
 
 
 @keyframes RightToLeftMiddle {

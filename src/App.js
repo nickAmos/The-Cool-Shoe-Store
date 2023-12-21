@@ -13,6 +13,7 @@ function App() {
 
   const [selectedShoe, setSelectedShoe] = useState([]);
   const [cart, setCart] = useState([]);
+  const [subtotal, setSubtotal] = useState(0);
 
   const pushCart = (shoe) => {
     setCart([...cart, shoe]);
@@ -24,20 +25,29 @@ function App() {
     })
   }
 
+  function totalCart(shoppingCart) {
+    let price = 0
+      for (let i=0; i<shoppingCart.length; i++) {
+        price += shoppingCart[i].price
+      }
+      setSubtotal(price);
+  }
+
+  useEffect(() => {
+    totalCart(cart);
+    console.log(subtotal);
+  },[cart])
 
   const changeShoe = (shoe) => {
    
     setSelectedShoe(shoe);
   }
 
-  useEffect(() => {
-    console.log(selectedShoe);
-  }, [selectedShoe])
 
   return (
     <div className="App">
       <Routes>
-        <Route  path='/' element={<Home cart={cart} pushCart={pushCart} changeShoe={changeShoe} />}/>
+        <Route  path='/' element={<Home cart={cart} pushCart={pushCart} changeShoe={changeShoe}filterCart={filterCart} subtotal={subtotal} />}/>
         <Route path='/selectedShoe' element={<SelectedShoe pushCart={pushCart} cart={cart} shoe={selectedShoe}/>} />
         <Route path='/checkout' element={<Checkout cart={cart} filterCart={filterCart}/>}/>
       </Routes>
