@@ -16,6 +16,12 @@
 #img-section {
     height: 80%;
     width: 30%;
+    background-color: rgb(234, 234, 234);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
     
 }
 
@@ -25,23 +31,27 @@
     
 }
 
-#name-size {
+#name-exit {
     display: flex;
-    height: 50%;
+    height: 33%;
     justify-content: space-between;
 }
 
-#name-size p {
+#name-exit p {
     padding-right: 10px;
 }
 
 #price-remove {
     display: flex;
-    height: 50%;
+    height: 33%;
     justify-content: space-between;
     align-items: end;
 }
 
 #icon-container {
     padding-right: 5px;
+}
+
+#arrow-icon {
+    margin: 0;
 }

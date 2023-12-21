@@ -1,8 +1,9 @@
 
-import { Icon } from 'semantic-ui-react';
+import { Button, Icon } from 'semantic-ui-react';
 import '../styling/CartDisplay.css';
+import { Link } from 'react-router-dom';
 
-export default function CartDisplay({cart, filterCart}) {
+export default function CartDisplay({cart, filterCart, changeShoe}) {
 
     return(
         <>
@@ -14,13 +15,16 @@ export default function CartDisplay({cart, filterCart}) {
                                     <p>img here</p>
                                 </div>
                                 <div id='text-section'>
-                                    <div id='name-size'>
+                                    <div id='name-exit'>
                                         <h4>{shoe.name}</h4>
-                                        <p>{shoe.size}</p>
+                                        <div id='icon-container' onClick={() => {filterCart(shoe.id)}}><Icon name='close'/></div>
+                                    </div>
+                                    <div>
+                                        <h4>Size {shoe.size}</h4>
                                     </div>
                                     <div id='price-remove'>
                                         <div><p>${shoe.price}.00 AUD</p></div>
-                                        <div id='icon-container' onClick={() => {filterCart(shoe.id)}}><Icon name='close'/></div>
+                                        <Link to='/selectedShoe'><Button compact circular color='white' onClick={() => changeShoe(shoe)}><Icon id="arrow-icon" name='arrow alternate circle right outline' color='black'></Icon></Button></Link>
                                     </div>
                                     
                                 </div>

@@ -17,14 +17,14 @@ import CartDisplay from './CartDisplay';
 
 const styleFilter = {
     position: 'absolute', top: '10%', padding: 0,
-    width: '22vw', height: '90vh', bgcolor: 'white', border: '2px solid #000', boxShadow: 24, p: 4,
+    width: '30vw', height: '90vh', bgcolor: 'white', border: '2px solid #000', boxShadow: 24, p: 4,
     borderRadius: 5, borderTopLeftRadius: 0, borderBottomLeftRadius: 0
   };
 
 
 const styleCart = {
     position: 'absolute', top: '10%', right: 0, borderRadius: 5,
-    width: '22vw', height: '90vh', bgcolor: 'white', border: '2px solid #000', p: 4, boxShadow: 24, 
+    width: '30vw', height: '90vh', bgcolor: 'white', border: '2px solid #000', p: 4, boxShadow: 24, 
     borderTopRightRadius: 0, borderBottomRightRadius: 0, 
   
   };
@@ -32,7 +32,7 @@ const styleCart = {
 
 
 
-function Header({getDataApp, cart, filterCart, subtotal}) {
+function Header({getDataApp, cart, filterCart, subtotal, changeShoe}) {
 
 const [reset, setResest] = useState(false);
 const [filterslider, setFilterslider] = useState(true);
@@ -100,14 +100,20 @@ const handleCloseCart = () => setOpenCart(false);
                                     <Box sx={styleCart}>
                                         <div id='cart-container'>
                                         <div id='cartdisplay-container'>
-                                            <CartDisplay cart={cart} filterCart={filterCart}/>
+                                            <CartDisplay cart={cart} filterCart={filterCart} changeShoe={changeShoe}/>
                                         </div>
 
                                         <div id='checkout-container'>
-                                            <Link to='/checkout'>
-                                                <Button compact circular black>Checkout</Button>
-                                                <p>{subtotal}</p>
-                                            </Link>
+                                            <div id='subtotal-container'> 
+                                                <p>Subtotal: <b>${subtotal}.00 AUD</b></p>
+                                            </div>
+                                            <div id='checkout-button-container'>
+                                                <Link to='/checkout'>
+                                                    <div><Button compact circular color='black'>Checkout</Button></div>
+                                                </Link>
+                                            </div>
+                                            
+
                                         </div>
 
                                         </div>

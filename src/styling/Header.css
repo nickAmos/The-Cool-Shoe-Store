@@ -106,19 +106,23 @@ span {
 }
 
 #cart-container {
-    border: 1px black solid;
+    
     height: 100%;
     position: relative;
 }
 
 #checkout-container {
     position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     bottom: 0;
     height: 10%;
     width: 100%;
+    border-top: black solid 1px;
     display: flex;
     justify-content: center;
-    background-color: aqua;
+    background-color: rgb(255, 255, 255);
 }
 
 #cartdisplay-container {
@@ -126,6 +130,26 @@ span {
 
     height: 90%;
 }
+
+#subtotal-container, #checkout-button-container {
+    width: 50%;
+    align-items: center;
+    display: flex;
+}
+
+#subtotal-container {
+    justify-content: center;
+}
+
+#checkout-button-container {
+  justify-content: flex-end;
+}
+
+#checkout-button-container div {
+    padding-right: 5px;
+}
+
+
 
 
 

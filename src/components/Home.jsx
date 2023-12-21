@@ -15,7 +15,7 @@ export default function Home({changeShoe, cart, filterCart, subtotal}) {
 
     return (
         <>
-        <Header cart={cart} getDataApp={getDataApp} filterCart={filterCart} subtotal={subtotal}/>
+        <Header cart={cart} changeShoe={changeShoe} getDataApp={getDataApp} filterCart={filterCart} subtotal={subtotal}/>
         <ShoeDisplay changeShoe={changeShoe} includedShoes={includedShoes} getDataApp/>
         </>
     )
