@@ -61,12 +61,18 @@ export default App;
 
 
 /*
-ShoeDisplay component should create a copy of the shoes array and map
-its content to the screen.
+Things to do:
 
-The shoes array should be manipulated by a functional component which is
-connected to the filter component.
+Style:
+ - format selected shoe description/title/shoe type button to fit content better
+ - clean up/add animation to cart display.
+ - Images for all sections // might need dif resolutions for each page.
+ - checkout page
 
+
+
+Functionality: 
+- fake purchasing progression
 
 
 */

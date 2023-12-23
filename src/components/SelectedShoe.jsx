@@ -269,45 +269,38 @@ function loader() {
 
     return(
         <>
-        <div id='micro-header'>
-            <Link to='/'>
-                <Button circular compact color='white'>Home</Button>
-            </Link>
-        </div>
         <div id='main-section'>
             <div id='main-flex-container'>
                 <div id='image-section'>
                     <div id='img-container'>image goes here</div>
                     <div id='size-selection'>
-                        <div id='size-header'>
-                            <h3>Select size</h3>
-                        </div>
+                        
 
                         <div id='grid-container-size'>
-                            <div id='button-div'><Button  basic  color={color6} onClick={() => handlesizechange(6)}><p>6</p></Button></div>
-                            <div id='button-div'><Button basic color={color65} onClick={() => handlesizechange(6.5)}><p>6.5</p></Button></div>
-                            <div id='button-div'><Button basic color={color7} onClick={() => handlesizechange(7)}><p>7</p></Button></div>
-                            <div id='button-div'><Button basic color={color75} onClick={() => handlesizechange(7.5)}><p>7.5</p></Button></div>
-                            <div id='button-div'><Button basic color={color8} onClick={() => handlesizechange(8)}><p>8</p></Button></div>
-                            <div id='button-div'><Button basic color={color85} onClick={() => handlesizechange(8.5)}><p>8.5</p></Button></div>
-                            <div id='button-div'><Button basic color={color9} onClick={() => handlesizechange(9)}><p>9</p></Button></div>
-                            <div id='button-div'><Button basic color={color95} onClick={() => handlesizechange(9.5)}><p>9.5</p></Button></div>
-                            <div id='button-div'><Button basic color={color10} onClick={() =>  handlesizechange(10)}><p>10</p></Button></div>
-                            <div id='button-div'><Button basic color={color105} onClick={() => handlesizechange(10.5)}><p>10.5</p></Button></div>
-                            <div id='button-div'><Button basic color={color11} onClick={() =>  handlesizechange(11)}><p>11</p></Button></div>
-                            <div id='button-div'><Button  basic color={color115} onClick={() => handlesizechange(11.5)}><p>11.5</p></Button></div>
-                            <div id='button-div'><Button basic color={color12} onClick={() =>  handlesizechange(12)}><p>12</p></Button></div>
-                            <div id='button-div'><Button basic color={color125} onClick={() => handlesizechange(12.5)}><p>12.5</p></Button></div>
-                            <div id='button-div'><Button basic color={color13} onClick={() =>  handlesizechange(13)}><p>13</p></Button></div>
-                            <div id='button-div'><Button basic color={color135} onClick={() => handlesizechange(13.5)}><p>13.5</p></Button></div>
+                            <div id='button-div'><Button id='button-div-button'  basic  color={color6} onClick={() => handlesizechange(6)}><p>6</p></Button></div>
+                            <div id='button-div'><Button id='button-div-button' basic color={color65} onClick={() => handlesizechange(6.5)}><p>6.5</p></Button></div>
+                            <div id='button-div'><Button id='button-div-button' basic color={color7} onClick={() => handlesizechange(7)}><p>7</p></Button></div>
+                            <div id='button-div'><Button id='button-div-button' basic color={color75} onClick={() => handlesizechange(7.5)}><p>7.5</p></Button></div>
+                            <div id='button-div'><Button id='button-div-button' basic color={color8} onClick={() => handlesizechange(8)}><p>8</p></Button></div>
+                            <div id='button-div'><Button id='button-div-button' basic color={color85} onClick={() => handlesizechange(8.5)}><p>8.5</p></Button></div>
+                            <div id='button-div'><Button id='button-div-button' basic color={color9} onClick={() => handlesizechange(9)}><p>9</p></Button></div>
+                            <div id='button-div'><Button id='button-div-button' basic color={color95} onClick={() => handlesizechange(9.5)}><p>9.5</p></Button></div>
+                            <div id='button-div'><Button id='button-div-button' basic color={color10} onClick={() =>  handlesizechange(10)}><p>10</p></Button></div>
+                            <div id='button-div'><Button id='button-div-button' basic color={color105} onClick={() => handlesizechange(10.5)}><p>10.5</p></Button></div>
+                            <div id='button-div'><Button id='button-div-button' basic color={color11} onClick={() =>  handlesizechange(11)}><p>11</p></Button></div>
+                            <div id='button-div'><Button id='button-div-button'  basic color={color115} onClick={() => handlesizechange(11.5)}><p>11.5</p></Button></div>
+                            <div id='button-div'><Button id='button-div-button' basic color={color12} onClick={() =>  handlesizechange(12)}><p>12</p></Button></div>
+                            <div id='button-div'><Button id='button-div-button' basic color={color125} onClick={() => handlesizechange(12.5)}><p>12.5</p></Button></div>
+                            <div id='button-div'><Button id='button-div-button' basic color={color13} onClick={() =>  handlesizechange(13)}><p>13</p></Button></div>
+                            <div id='button-div'><Button id='button-div-button' basic color={color135} onClick={() => handlesizechange(13.5)}><p>13.5</p></Button></div>
                         </div>
 
                         </div>
                         
                 </div>
                 <div id='description-section'>
-                    <div id='shoe-name'><h1>{shoe.name}</h1><Button circular compact color='orange'>{shoe.type}</Button></div>
-                    <div id='characteristic-buttons'><p>${shoe.price}.00 AUD</p></div>
+                    <div id='shoe-name'><h1>{shoe.name}</h1><h2>${shoe.price}.00 AUD</h2></div>
+                    <div id='characteristic-buttons'><Button circular compact color='orange'>{shoe.type}</Button></div>
                     <div id='description'><p>{shoe.description}</p></div>
                     <div id='checkout'>
                         <div id='checkout-flex-container'>

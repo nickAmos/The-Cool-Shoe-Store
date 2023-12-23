@@ -24,7 +24,7 @@ export default function CartDisplay({cart, filterCart, changeShoe}) {
                                     </div>
                                     <div id='price-remove'>
                                         <div><p>${shoe.price}.00 AUD</p></div>
-                                        <Link to='/selectedShoe'><Button compact circular color='white' onClick={() => changeShoe(shoe)}><Icon id="arrow-icon" name='arrow alternate circle right outline' color='black'></Icon></Button></Link>
+                                        <Link to='/selectedShoe'><Icon id='arrow-icon' onClick={() => changeShoe(shoe)}  name='arrow alternate circle right outline' size='large' color='black'></Icon></Link>
                                     </div>
                                     
                                 </div>

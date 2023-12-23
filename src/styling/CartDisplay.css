@@ -9,15 +9,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: solid 2px grey;
-    margin-bottom: 5px;
+    border-top: solid 1px rgb(0, 0, 0);
+    margin-bottom: 15px;
 }
 
 #img-section {
-    height: 80%;
+    height: 75%;
+    margin-bottom: 5px;
     width: 30%;
     background-color: rgb(234, 234, 234);
-    border-radius: 15px;
+    border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -50,8 +51,9 @@
 
 #icon-container {
     padding-right: 5px;
+    cursor: pointer;
 }
 
 #arrow-icon {
-    margin: 0;
+    padding-right: 5px;
 }
