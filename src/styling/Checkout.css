@@ -1,0 +1,24 @@
+#checkout-container-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: antiquewhite;
+}
+
+#checkout-flex-child {
+    height: 75vh;
+    width: 60vw;
+    border: black 1px solid;
+    display: flex;
+}
+
+#checkout-img-section, #checkout-shoe-section {
+    height: 100%;
+    width: 50%;
+    border: pink 1px solid;
+}
+
+
+
