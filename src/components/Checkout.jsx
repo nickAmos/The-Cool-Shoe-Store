@@ -3,6 +3,7 @@ import '../styling/Checkout.css';
 import { Button, Icon } from "semantic-ui-react";
 import { useState } from "react";
 import { Modal, Box } from "@mui/material";
+import PaymentButton from "./PaymentButton";
 
 export default function Checkout({cart, filterCart, subtotal}) {
 
@@ -140,6 +141,19 @@ export default function Checkout({cart, filterCart, subtotal}) {
 
                     <div id="shipping-checkout">
                     <div id="shipping-title-checkout"><h2>Payment Method</h2> </div>
+                    <div id="paywithButtonContainer">
+                        <div id="buttonlayer">
+                            <PaymentButton color={'black'} paymentName={'Apple Pay'} paymentIcon={'apple'} txtColor={'white'} borderColorTop={'1px solid black'}  borderColorRight={'1px solid black'} borderColorBottom={'1px solid black'} borderColorLeft={'1px solid black'} pointer={'pointer'}/>
+                            <PaymentButton color={'#FCBB32'} paymentName={'PayPal'} paymentIcon={'paypal'} txtColor={'#012169'} borderColorTop={'1px solid black'} borderColorRight={'1px solid black'} borderColorBottom={'1px solid black'} borderColorLeft={'1px solid black'} pointer={'pointer'}/>
+                        </div>
+                        <div id="buttonlayer">
+                            <PaymentButton color={'white'} paymentName={'Google Pay'} paymentIcon={'google'} txtColor={'black'} borderColorTop={'3px solid #EA4335'} borderColorRight={'3px solid #4285F2'} borderColorBottom={'3px solid #34A853'} borderColorLeft={'3px solid #FBBC05'} pointer={'pointer'}/>
+                            <PaymentButton color={'white'} paymentName={'Apple Pay'} paymentIcon={'apple'} txtColor={'black'} borderColorTop={'1px solid black'} borderColorRight={'1px solid black'} borderColorBottom={'1px solid black'} borderColorLeft={'1px solid black'} pointer={'pointer'}/>
+                        </div>
+                       
+                    
+                    
+                    </div>
                     </div>
                 </div>
                 
