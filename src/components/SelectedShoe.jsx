@@ -277,22 +277,22 @@ function loader() {
                         
 
                         <div id='grid-container-size'>
-                            <div id='button-div'><Button id='button-div-button'  basic  color={color6} onClick={() => handlesizechange(6)}><p>6</p></Button></div>
-                            <div id='button-div'><Button id='button-div-button' basic color={color65} onClick={() => handlesizechange(6.5)}><p>6.5</p></Button></div>
-                            <div id='button-div'><Button id='button-div-button' basic color={color7} onClick={() => handlesizechange(7)}><p>7</p></Button></div>
-                            <div id='button-div'><Button id='button-div-button' basic color={color75} onClick={() => handlesizechange(7.5)}><p>7.5</p></Button></div>
-                            <div id='button-div'><Button id='button-div-button' basic color={color8} onClick={() => handlesizechange(8)}><p>8</p></Button></div>
-                            <div id='button-div'><Button id='button-div-button' basic color={color85} onClick={() => handlesizechange(8.5)}><p>8.5</p></Button></div>
-                            <div id='button-div'><Button id='button-div-button' basic color={color9} onClick={() => handlesizechange(9)}><p>9</p></Button></div>
-                            <div id='button-div'><Button id='button-div-button' basic color={color95} onClick={() => handlesizechange(9.5)}><p>9.5</p></Button></div>
-                            <div id='button-div'><Button id='button-div-button' basic color={color10} onClick={() =>  handlesizechange(10)}><p>10</p></Button></div>
-                            <div id='button-div'><Button id='button-div-button' basic color={color105} onClick={() => handlesizechange(10.5)}><p>10.5</p></Button></div>
-                            <div id='button-div'><Button id='button-div-button' basic color={color11} onClick={() =>  handlesizechange(11)}><p>11</p></Button></div>
-                            <div id='button-div'><Button id='button-div-button'  basic color={color115} onClick={() => handlesizechange(11.5)}><p>11.5</p></Button></div>
-                            <div id='button-div'><Button id='button-div-button' basic color={color12} onClick={() =>  handlesizechange(12)}><p>12</p></Button></div>
-                            <div id='button-div'><Button id='button-div-button' basic color={color125} onClick={() => handlesizechange(12.5)}><p>12.5</p></Button></div>
-                            <div id='button-div'><Button id='button-div-button' basic color={color13} onClick={() =>  handlesizechange(13)}><p>13</p></Button></div>
-                            <div id='button-div'><Button id='button-div-button' basic color={color135} onClick={() => handlesizechange(13.5)}><p>13.5</p></Button></div>
+                            <div id='button-div'><Button id='button-div-button'  basic  color={color6} onClick={() => handlesizechange(6)}><p>6 AU</p></Button></div>
+                            <div id='button-div'><Button id='button-div-button' basic color={color65} onClick={() => handlesizechange(6.5)}><p>6.5 AU</p></Button></div>
+                            <div id='button-div'><Button id='button-div-button' basic color={color7} onClick={() => handlesizechange(7)}><p>7 AU</p></Button></div>
+                            <div id='button-div'><Button id='button-div-button' basic color={color75} onClick={() => handlesizechange(7.5)}><p>7.5 AU</p></Button></div>
+                            <div id='button-div'><Button id='button-div-button' basic color={color8} onClick={() => handlesizechange(8)}><p>8 AU</p></Button></div>
+                            <div id='button-div'><Button id='button-div-button' basic color={color85} onClick={() => handlesizechange(8.5)}><p>8.5 AU</p></Button></div>
+                            <div id='button-div'><Button id='button-div-button' basic color={color9} onClick={() => handlesizechange(9)}><p>9 AU</p></Button></div>
+                            <div id='button-div'><Button id='button-div-button' basic color={color95} onClick={() => handlesizechange(9.5)}><p>9.5 AU</p></Button></div>
+                            <div id='button-div'><Button id='button-div-button' basic color={color10} onClick={() =>  handlesizechange(10)}><p>10 AU</p></Button></div>
+                            <div id='button-div'><Button id='button-div-button' basic color={color105} onClick={() => handlesizechange(10.5)}><p>10.5 AU</p></Button></div>
+                            <div id='button-div'><Button id='button-div-button' basic color={color11} onClick={() =>  handlesizechange(11)}><p>11 AU</p></Button></div>
+                            <div id='button-div'><Button id='button-div-button'  basic color={color115} onClick={() => handlesizechange(11.5)}><p>11.5 AU</p></Button></div>
+                            <div id='button-div'><Button id='button-div-button' basic color={color12} onClick={() =>  handlesizechange(12)}><p>12 AU</p></Button></div>
+                            <div id='button-div'><Button id='button-div-button' basic color={color125} onClick={() => handlesizechange(12.5)}><p>12.5 AU</p></Button></div>
+                            <div id='button-div'><Button id='button-div-button' basic color={color13} onClick={() =>  handlesizechange(13)}><p>13 AU</p></Button></div>
+                            <div id='button-div'><Button id='button-div-button' basic color={color135} onClick={() => handlesizechange(13.5)}><p>13.5 AU</p></Button></div>
                         </div>
 
                         </div>

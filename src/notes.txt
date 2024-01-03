@@ -1,0 +1,39 @@
+
+
+Tasks to complete: 
+- Fonts for:
+    - home page
+    - selected shoe
+    - checkout
+- image collected and defualt sizing
+- generate descriptions of shoes (ChatGPT)
+- generate list of pro runners (ChatGPT)
+- style checkout and selected shoe pages 
+- Complete modal for details
+- Complete modal for checkout
+-  Responsivness for all
+
+Shoes: 
+    - Race:
+        - Nike Alphafly 2
+        - Nike Alphafly 3 Proto
+        - Nike Vaporfly 3
+        - Saucony Endorphin Elite
+        - Saucony Kinvara Pro
+        - Saucony Endorphin Pro 3
+        - Adizero Prime X 2.0 Strung
+        - Adizero Prime X Strung
+        - Adizero Adios Pro 3
+    - Daily Trainer:
+        - Adizero Boston 12
+        - Adizero Adios 8
+        - Adizero SL
+        - Adizero Boston 11 
+        - Nike Invincible Run 3
+        - Nike Pegasus 40
+        - Nike Pegasus Turbo
+        - Nike Structure 25
+        - Saucony Endorphin Speed 3
+        - Saucony Triumph 21
+        - Saucony Guide 16 
+        - Saucony Axon 3
