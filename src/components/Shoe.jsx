@@ -17,7 +17,7 @@ if (shoe.brand === 'Nike') {
 } else if (shoe.brand === 'Adidas') {
     src = <img style={{width: 50}} src={require('../Images/adidasStretch.png')} alt='brandlogo' />
 
-} else if (shoe.brand === 'Saucany') {
+} else if (shoe.brand === 'Saucony') {
     src = <img style={{height: 15}} src={require('../Images/Saucony.png')} alt='brandlogo' />
 }
 
