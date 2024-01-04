@@ -1,124 +1,144 @@
 import { Link } from 'react-router-dom';
 import '../styling/SelectedShoe.css';
-import { Button, Icon } from 'semantic-ui-react';
+import { Button, Icon, RevealContent, Reveal } from 'semantic-ui-react';
 import { useEffect, useState } from 'react';
+
 
 export default function SelectedShoe({shoe, pushCart, cart}) {
 
-
-
     
 
-    const [color6, setColor6] = useState('black');
-    const [color65, setColor65] = useState('black');
-    const [color7, setColor7] = useState('black');
-    const [color75, setColor75] = useState('black');
-    const [color8, setColor8] = useState('black');
-    const [color85, setColor85] = useState('black');
-    const [color9, setColor9] = useState('black');
-    const [color95, setColor95] = useState('black');
-    const [color10, setColor10] = useState('black');
-    const [color105, setColor105] = useState('black');
-    const [color11, setColor11] = useState('black');
-    const [color115, setColor115] = useState('black');
-    const [color12, setColor12] = useState('black');
-    const [color125, setColor125] = useState('black');
-    const [color13, setColor13] = useState('black');
-    const [color135, setColor135] = useState('black');
+    const [color6, setColor6] = useState('grey');
+    const [color65, setColor65] = useState('grey');
+    const [color7, setColor7] = useState('grey');
+    const [color75, setColor75] = useState('grey');
+    const [color8, setColor8] = useState('grey');
+    const [color85, setColor85] = useState('grey');
+    const [color9, setColor9] = useState('grey');
+    const [color95, setColor95] = useState('grey');
+    const [color10, setColor10] = useState('grey');
+    const [color105, setColor105] = useState('grey');
+    const [color11, setColor11] = useState('grey');
+    const [color115, setColor115] = useState('grey');
+    const [color12, setColor12] = useState('grey');
+    const [color125, setColor125] = useState('grey');
+    const [color13, setColor13] = useState('grey');
+    const [color135, setColor135] = useState('grey');
 
     const [shoeSize, setShoeSize] = useState(false);
     const [loading, setLoading] = useState(false);
 
+    const [footer, setFooter] = useState(false);
+
+
+    const openFooter = () => {
+        
+        setFooter(true);
+        setTimeout(() => {
+            window.scrollTo({ top: 500, behavior: "smooth" })
+        }, 0)
+    }
+
+    const closeFooter = () => {
+        setTimeout(() => {
+            window.scrollTo({ top: -500, behavior: "smooth" })
+        }, 0)
+
+        setTimeout(() => {
+            setFooter(false);
+        }, 500)
+    }
+
 
 useEffect(() => {
     if (shoeSize === 6) {
-        setColor6('orange');
-    } else {
         setColor6('black');
+    } else {
+        setColor6('grey');
     }
 
     if (shoeSize ===6.5) {
-       setColor65('orange');    
+       setColor65('black');    
     }else {
-        setColor65('black');
+        setColor65('grey');
     }
 
      if (shoeSize === 7) {
-        setColor7('orange'); 
+        setColor7('black'); 
     } else {
-        setColor7('black');
+        setColor7('grey');
     }
     
     if (shoeSize ===7.5) {
-        setColor75('orange'); 
+        setColor75('black'); 
       
     }  else {
-        setColor75('black');
+        setColor75('grey');
     }
 
 
     if (shoeSize === 8) {
-        setColor8('orange');  
+        setColor8('black');  
     } else {
-        setColor8('black');
+        setColor8('grey');
     }
 
     if (shoeSize ===8.5) {
-        setColor85('orange'); 
+        setColor85('black'); 
        
-    }  else setColor85('black');
+    }  else setColor85('grey');
 
 
      if (shoeSize === 9) {
-        setColor9('orange'); 
+        setColor9('black'); 
         
-    }  else setColor9('black');
+    }  else setColor9('grey');
     
     if (shoeSize === 9.5) {
-       setColor95('orange'); 
+       setColor95('black'); 
         
-    }  else setColor95('black');
+    }  else setColor95('grey');
 
 
     if (shoeSize === 10) {
-       setColor10('orange');     
-    } else setColor10('black');
+       setColor10('black');     
+    } else setColor10('grey');
     
     if (shoeSize === 10.5) {
-        setColor105('orange'); 
-    } else {setColor105('black');}
+        setColor105('black'); 
+    } else {setColor105('grey');}
 
 
      if (shoeSize === 11) {
-        setColor11('orange'); 
+        setColor11('black'); 
      
-    } else setColor11('black');
+    } else setColor11('grey');
 
 
      if (shoeSize === 11.5) {
-        setColor115('orange');  
-    } else {setColor115('black');}
+        setColor115('black');  
+    } else {setColor115('grey');}
     
     
     if (shoeSize === 12) {
-     setColor12('orange'); 
+     setColor12('black'); 
          
-    }else {setColor12('black');}
+    }else {setColor12('grey');}
     
     
     if (shoeSize === 12.5) {
-         setColor125('orange'); 
+         setColor125('black'); 
         
-    }  else setColor125('black');
+    }  else setColor125('grey');
     
     if (shoeSize === 13) {
-        setColor13('orange'); 
-    }  else {setColor13('black');}
+        setColor13('black'); 
+    }  else {setColor13('grey');}
     
     if (shoeSize === 13.5) {
-         setColor135('orange'); 
+         setColor135('black'); 
         
-    }  else setColor135('black');
+    }  else setColor135('grey');
 
 
 }, [shoeSize])
@@ -239,7 +259,7 @@ const handlesizechange = (num) => {
     }
 }
 
-const [trolleyColor, setTrolleyColor] = useState('black');
+const [trolleyColor, setTrolleyColor] = useState('grey');
 
 
 function addToCart() {
@@ -258,17 +278,17 @@ function loader() {
         setLoading(false);
     },1000)
 
-    setTimeout(() => {
-        setTrolleyColor('orange');
-    },1000 )
-    setTimeout(() => {
-        setTrolleyColor('black');
-    },1700 )
+   
 
 }
 
     return(
         <>
+        <div id='selected-header'>
+            <div id='header-flex-child'>
+                <h2 id='TTS'>TTS</h2>
+            </div>
+        </div>
         <div id='main-section'>
             <div id='main-flex-container'>
                 <div id='image-section'>
@@ -300,12 +320,12 @@ function loader() {
                 </div>
                 <div id='description-section'>
                     <div id='shoe-name'><h1>{shoe.name}</h1><h2>${shoe.price}.00 AUD</h2></div>
-                    <div id='characteristic-buttons'><Button circular compact color='orange'>{shoe.type}</Button></div>
+                    <div id='characteristic-buttons'><Button id='shoetype-button' circular compact >{shoe.type}</Button></div>
                     <div id='description'><p>{shoe.description}</p></div>
                     <div id='checkout'>
                         <div id='checkout-flex-container'>
                             <div id='add-container'>
-                                <Button id='size-button' size='massive' disabled={!shoeSize} loading={loading} onClick={() => loader()} >{shoeSize > 0 ? <div id='checkout-div'><p>Add size: {shoeSize} to cart</p></div> : <div id='checkout-div'><p><Icon name='caret square left outline'/>Select size</p></div>}</Button>
+                                <Button id='size-button' size='massive' disabled={!shoeSize} loading={loading} onClick={() => loader()} >{shoeSize > 0 ? <div id='checkout-div'><p>Add size: {shoeSize} to cart</p></div> : <div id='checkout-div'><p style={{color: 'black'}}><Icon name='caret square left outline'/>Select size</p></div>}</Button>
                             </div>
 
                             <div id='twobutton-container'>
@@ -318,12 +338,12 @@ function loader() {
 
                             <div>
                                 <Link to='/checkout'>
-                                    <Button basic color={trolleyColor} animated='vertical'>
+                                    <Button basic color='black' animated='vertical'>
                                         <div id='checkout-button'>
                                             <Button.Content visible>
                                             <Icon.Group>
-                                                <Icon size='big'  id='shopping-trolley' name='shop'/>
-                                                <Icon corner='top right'><Button id='cartcounter' circular compact color='orange' size='mini' >{cart.length}</Button></Icon>
+                                                <Icon size='big' color='black'  id='shopping-trolley' name='shop'/>
+                                                <Icon corner='top right'><Button id='cartcounter' circular compact size='mini' >{cart.length}</Button></Icon>
                                             </Icon.Group>
                                             </Button.Content>
                                             
@@ -343,6 +363,55 @@ function loader() {
             </div>
     
         </div>
+
+        <div id='selected-footer'>
+
+            {!footer ? 
+             <div id='reveal-wrapper' onClick={() => openFooter()}>
+             <Reveal id="reveal" animated='fade'>
+                 <RevealContent id='revealContent' visible>
+                     <div id='see-more-flex-child'>
+                         <div id='left-border'></div>
+                         <div id='middle-content'>
+                             <p>See more from {shoe.brand}</p>
+                         </div>
+                         <div id='right-border'></div>
+                     </div>
+                 </RevealContent>
+                 <RevealContent id='revealContent' hidden>
+                     <div id='hidden-content'>
+                         <Icon id='angle-down' name='angle down' size='large' />
+                     </div>
+                 </RevealContent>
+             </Reveal>
+         </div>
+            : 
+            
+            <div id='reveal-wrapper' onClick={() => closeFooter()}>
+             <div id='hidden-content'>
+                         <Icon id='angle-up' name='angle up' size='large' />
+                     </div>
+         </div>}
+           
+        </div>
+        {footer ? 
+        <div id='extended-footer'>
+
+        </div>
+        
+        : null}
         </>
     )
 }
+
+
+
+
+
+/* <div id='see-more-flex-child'>
+                <div id='left-border'></div>
+                <div id='middle-content'>
+                    <p>See more from {shoe.brand}</p>
+                </div>
+                <div id='right-border'></div>
+            </div> */

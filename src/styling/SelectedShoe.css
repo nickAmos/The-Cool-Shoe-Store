@@ -1,19 +1,23 @@
-#micro-header {
-    height: 7.5vh;
-    width: 100vw;
-    background-color: antiquewhite;
-}
 
 #main-section {
-    height: 92.5vh;
+    height: 90vh;
     width: 100vw;
     display: flex;
     align-items:center;
     justify-content: center;
 }
 
+#selected-footer, #selected-header {
+    height: 5vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #494F55;
+}
+
 #main-flex-container {
-    width: 60vw;
+    width: 80vw;
     height: 70vh;
     display: flex;
     border: solid black 1px;
@@ -37,7 +41,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border-bottom: solid black 1px;
+    
     border-right: solid black 1px;
    
 }
@@ -71,6 +75,8 @@
 #cartcounter {
     padding-right: 10px;
     padding-left: 10px;
+    background-color: black;
+    color: white;
 }
 
 #checkout-div {
@@ -83,19 +89,19 @@
 }
 #checkout-button {
     width: 100px;
+    color: black;
 }
 
 #button-div {
     text-align: center;
 }
 
-#button-div p:hover {
-    color: orange;
-}
 
 
 #size-button {
     height: 75px;
+    background-color: rgb(68, 76, 139);
+    color: white;
 }
 
 #size-header {
@@ -115,6 +121,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-right: 10px;
+    padding-left: 10px;
     
 }
 
@@ -131,9 +139,12 @@
 }
 
 #characteristic-buttons {
-    height: 10%;
+    height: 5%;
     display: flex;
-    align-items: center;
+
+    padding-left: 15px;
+    margin-bottom: 15px;
+    
    
 }
 #characteristic-buttons p {
@@ -142,6 +153,8 @@
 
 #description {
     height: 40%;
+    padding-left: 15px;
+    padding-right: 15px;
     
 }
 #description p {
@@ -180,3 +193,122 @@
     align-items: center;
     justify-content: space-between
 }
+
+#shoetype-button {
+    background-color: rgb(68, 76, 139);
+    color: white;
+}
+
+
+
+/* Header Styling
+- selected header already has flex and max h/w
+*/
+
+#header-flex-child {
+    width: 100px;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(255, 243, 233);
+}
+
+#TTS {
+    padding: 0;
+    margin: 0;
+}
+
+
+
+
+
+
+
+
+
+
+/* footer styling */
+
+#reveal-wrapper {
+    width: 15%;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#reveal {
+    width: 100%;
+    height: 100%;
+}
+
+#revealContent {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+
+}
+
+#hidden-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #494F55;
+}
+
+#see-more-flex-child {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #494F55;
+    
+}
+
+#left-border, #right-border {
+    
+    height: 100%;
+    width: 5%;
+    border-top:  3px solid rgb(255, 243, 233);
+    border-bottom: 3px solid rgb(255, 243, 233);
+}
+
+#left-border {
+    border-left: 3px solid rgb(255, 243, 233);
+}
+
+#right-border {
+    border-right: 3px solid rgb(255, 243, 233);
+}
+
+#middle-content {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: rgb(255, 243, 233);
+}
+
+#angle-down {
+    padding-bottom: 5px;
+    color: rgb(255, 243, 233);
+}
+
+#angle-up {
+    padding-bottom: 5px;
+    color: rgb(255, 243, 233);
+}
+
+#extended-footer {
+    height: 500px;
+    width: 100%;
+    background-color: #494F55;
+}
+
+
