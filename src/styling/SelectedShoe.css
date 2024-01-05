@@ -7,6 +7,11 @@
     justify-content: center;
 }
 
+#checkout-text {
+    font-family: 'Kumbh Sans', sans-serif;
+    font-weight: 300;
+}
+
 #selected-footer, #selected-header {
     height: 5vh;
     width: 100vw;
@@ -31,11 +36,15 @@
 
 #image-section {
     display: flex;
+    position: relative;
     flex-direction: column;
     justify-content: flex-end;
 }
 
+
+
 #img-container {
+    position: relative;
     width: 100%;
     height: 60%;
     display: flex;
@@ -80,12 +89,16 @@
 }
 
 #checkout-div {
+    
     width: 250px;
     height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #checkout-div p {
-    font-size: 1.5rem;
+    font-size: large;
 }
 #checkout-button {
     width: 100px;
@@ -99,9 +112,23 @@
 
 
 #size-button {
-    height: 75px;
+    height: 50px;
     background-color: rgb(68, 76, 139);
     color: white;
+    
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#size-button-alt {
+    height: 75px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
 }
 
 #size-header {
@@ -115,12 +142,17 @@
 #description-section {
     display: flex;
     flex-direction: column;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-weight: 300;
+    text-align:justify;
+
 }
 #shoe-name {
-    height: 10%;
+    height: 20%;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
     padding-right: 10px;
     padding-left: 10px;
     
@@ -129,6 +161,8 @@
 #shoe-name h1 {
     padding-top: 10px;
     padding-left: 5px;
+    font-family: 'Tektur', sans-serif;
+
 }
 
 #shoe-name h2 {
@@ -136,25 +170,23 @@
     padding-right: 5px;
     margin-bottom: 14px;
     margin-top: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-weight: 500;
+    font-style: normal;
 }
 
-#characteristic-buttons {
-    height: 5%;
-    display: flex;
 
-    padding-left: 15px;
-    margin-bottom: 15px;
-    
-   
-}
 #characteristic-buttons p {
     font-size: 1.3rem;
 }
 
 #description {
-    height: 40%;
+    height: 35%;
     padding-left: 15px;
     padding-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     
 }
 #description p {
@@ -163,6 +195,7 @@
 
 #checkout {
     height: 40%;
+    width: 100%;
     background-color: rgb(255, 255, 255);
     display: flex;
     justify-content: center;
@@ -172,6 +205,7 @@
     display: flex;
     flex-direction: column;
     height: 100%;
+    width: 300px;
     background-color: rgb(255, 255, 255);
 }
 
@@ -197,6 +231,9 @@
 #shoetype-button {
     background-color: rgb(68, 76, 139);
     color: white;
+    position: absolute;
+    top: 15px;
+    left: 15px;
 }
 
 
@@ -247,6 +284,9 @@
 #revealContent {
     width: 100%;
     height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
 
 }
@@ -261,7 +301,7 @@
 }
 
 #see-more-flex-child {
-    width: 100%;
+    width: 80%;
     height: 100%;
     display: flex;
     align-items: center;
@@ -292,6 +332,7 @@
     align-items: center;
     justify-content: center;
     height: 100%;
+    font-family: 'Kumbh Sans', sans-serif;
     color: rgb(255, 243, 233);
 }
 
@@ -335,9 +376,28 @@
     
 }
 
-#reveal-div {
+#reveal-div, #reveal-div-size {
     height: 100%;
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#reveal-div-size {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+#angle-double-left-txt, #angle-double-left {
+    height: 25px;
+    font-size: 1.3rem;
+}
+
+#angle-double-left {
+    padding-top: 3px;
 }
 
 

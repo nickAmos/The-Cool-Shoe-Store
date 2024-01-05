@@ -367,7 +367,9 @@ function loader() {
         <div id='main-section'>
             <div id='main-flex-container'>
                 <div id='image-section'>
-                    <div id='img-container'>image goes here</div>
+                    <div id='img-container'>
+                     <Button id='shoetype-button' circular compact >{shoe.type}</Button>
+                    </div>
                     <div id='size-selection'>
                         
 
@@ -395,19 +397,26 @@ function loader() {
                 </div>
                 <div id='description-section'>
                     <div id='shoe-name'><h1>{shoe.name}</h1><h2>${shoe.price}.00 AUD</h2></div>
-                    <div id='characteristic-buttons'><Button id='shoetype-button' circular compact >{shoe.type}</Button></div>
                     <div id='description'><p>{shoe.description}</p></div>
                     <div id='checkout'>
                         <div id='checkout-flex-container'>
                             <div id='add-container'>
-                                <Button id='size-button' size='massive' disabled={!shoeSize} loading={loading} onClick={() => loader()} >{shoeSize > 0 ? <div id='checkout-div'><p>Add size: {shoeSize} to cart</p></div> : <div id='checkout-div'><p style={{color: 'black'}}><Icon name='caret square left outline'/>Select size</p></div>}</Button>
+                                {shoeSize ? <Button id='size-button' loading={loading} onClick={() => loader()} ><div id='checkout-div'><p id='checkout-text'>Add size: {shoeSize} to cart</p></div></Button>
+                                : <div id='size-button-alt' >
+                                        <RevealMine posX={100} delay={0.7} id='reveal-div-size'>
+                                            
+                                                <Icon id='angle-double-left' name='angle double left'/>
+                                                <p id='angle-double-left-txt'>Select Size</p>
+                                            
+                                        </RevealMine>
+                                    </div>}
                             </div>
 
                             <div id='twobutton-container'>
 
                             <div>
                                 <Link to='/'>
-                                <Button id="continue-shopping" basic color='black'>Continue shopping</Button>
+                                <Button id="continue-shopping" basic color='black'><p  id='checkout-text'>Continue shopping</p></Button>
                                 </Link>
                             </div>
 
@@ -423,7 +432,7 @@ function loader() {
                                             </Button.Content>
                                             
                                             <Button.Content hidden>
-                                                <p>Checkout</p>
+                                                {cart.length > 0 ? <p  id='checkout-text'>Checkout</p> : <p id='checkout-text'>Cart Empty</p>}
                                             </Button.Content>
                                             
                                         </div>

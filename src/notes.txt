@@ -12,6 +12,7 @@ Tasks to complete:
 - Complete modal for details
 - Complete modal for checkout
 -  Responsivness for all
+- refresh returns you to home page
 
 Shoes: 
     - Race:
