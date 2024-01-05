@@ -1,12 +1,81 @@
 import { Link } from 'react-router-dom';
 import '../styling/SelectedShoe.css';
 import { Button, Icon, RevealContent, Reveal } from 'semantic-ui-react';
-import { useEffect, useState } from 'react';
+import { useEffect, useState} from 'react';
+import RevealMine from './Reveal';
+import Card from './Card';
+import { NikeShoes, SaucShoes, AdidasShoes } from '../Shoes';
 
 
 export default function SelectedShoe({shoe, pushCart, cart}) {
 
-    
+    const shoeName = shoe.name;
+    const brand = shoe.brand;
+
+    const filteredNike = NikeShoes.filter((shoe) => shoe.name !== shoeName);
+    const filteredSauc = SaucShoes.filter((shoe) => shoe.name !== shoeName);
+    const filteredAdidas = AdidasShoes.filter((shoe) => shoe.name !== shoeName);
+
+    let threeShoes = [];
+
+    let num1 = Math.floor(Math.random() * 6);
+    let num2 = 0;
+    let num3 = 0;
+
+
+    function Gen3Num() {
+        while (true) {
+            num2 = Math.floor(Math.random() * 6);
+            if (num1 !== num2) {
+                break;
+            }
+        }
+        while (true) {
+            num3 = Math.floor(Math.random() * 6);
+            if ((num3 !== num2) && (num3 !== num1)) {
+                break;
+            }
+        }
+        console.log(num1, num2, num3);
+    }
+
+
+
+    Gen3Num();
+
+    function fillArray () {
+
+   
+        if (brand === 'Nike') {
+            threeShoes.push(filteredNike[num1]);
+            threeShoes.push(filteredNike[num2]);
+            threeShoes.push(filteredNike[num3]);
+        }
+
+        if (brand === 'Adidas') {
+            threeShoes.push(filteredAdidas[num1]);
+            threeShoes.push(filteredAdidas[num2]);
+            threeShoes.push(filteredAdidas[num3]);
+        }
+
+        if (brand === 'Saucony') {
+            threeShoes.push(filteredSauc[num1]);
+            threeShoes.push(filteredSauc[num2]);
+            threeShoes.push(filteredSauc[num3]);
+        }
+
+        console.log(threeShoes[0]['name']);
+        console.log(threeShoes[1]['name']);
+        console.log(threeShoes[2]['name']);
+
+}
+
+    fillArray();
+
+
+
+
+
 
     const [color6, setColor6] = useState('grey');
     const [color65, setColor65] = useState('grey');
@@ -278,6 +347,12 @@ function loader() {
         setLoading(false);
     },1000)
 
+
+    //framer motion logic
+
+
+    
+
    
 
 }
@@ -396,6 +471,39 @@ function loader() {
         </div>
         {footer ? 
         <div id='extended-footer'>
+
+            
+
+            <div id='card-container'>
+
+                <div id='card-child'>
+                    <RevealMine  posY={200} delay={0.5}>
+                        <Card shoe={threeShoes[0]} />
+                    </RevealMine>
+                </div>
+                <div id='card-child'>
+                    <RevealMine posY={200} delay={0.7}>
+                        <Card shoe={threeShoes[1]}/>
+                    </RevealMine>
+                </div>
+                <div id='card-child'>
+                    <RevealMine posY={200} delay={0.9}>
+                        <Card shoe={threeShoes[2]}/>
+                    </RevealMine>
+                </div>
+                <div id='card-child'>
+                    <RevealMine posY={200} delay={1.1}>
+                        <Card shoe={threeShoes[0]}/>
+                    </RevealMine>
+                </div>
+
+
+
+            </div>
+              
+            
+
+            
 
         </div>
         

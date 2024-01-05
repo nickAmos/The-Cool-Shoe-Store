@@ -309,6 +309,36 @@
     height: 500px;
     width: 100%;
     background-color: #494F55;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+#animated-div {
+    height: 200px;
+    width: 200px;
+    background-color: hotpink;
+}
+
+#card-container {
+    width: 80%;
+    height: 70%;
+   
+    display: flex;
+    align-items:center ;
+    justify-content: space-between;
+}
+
+#card-child {
+    height: 100%;
+    width: 20%;
+    
+}
+
+#reveal-div {
+    height: 100%;
+    width: 100%;
+}
+
 
 
