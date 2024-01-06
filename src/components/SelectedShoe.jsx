@@ -5,9 +5,12 @@ import { useEffect, useState} from 'react';
 import RevealMine from './Reveal';
 import Card from './Card';
 import { NikeShoes, SaucShoes, AdidasShoes } from '../Shoes';
+import { motion } from "framer-motion";
 
 
-export default function SelectedShoe({shoe, pushCart, cart}) {
+
+
+export default function SelectedShoe({shoe, pushCart, cart, changeShoe}) {
 
     const shoeName = shoe.name;
     const brand = shoe.brand;
@@ -98,6 +101,11 @@ export default function SelectedShoe({shoe, pushCart, cart}) {
     const [loading, setLoading] = useState(false);
 
     const [footer, setFooter] = useState(false);
+
+    const [checkoutButtontxt, setCheckoutButtontxt] = useState(true);
+
+    const [scale, setScale] = useState(1);
+    const [rotate, setRotate] = useState(0);
 
 
     const openFooter = () => {
@@ -328,32 +336,55 @@ const handlesizechange = (num) => {
     }
 }
 
-const [trolleyColor, setTrolleyColor] = useState('grey');
-
-
 function addToCart() {
     let uniqueshoe = {...shoe, id: crypto.randomUUID(), size: shoeSize}
-    console.log(uniqueshoe);
     pushCart(uniqueshoe);
 }
 
 function loader() {
 
-    addToCart();
 
     setLoading(true);
 
     setTimeout(() => {
+        addToCart();
+        setCheckoutButtontxt(false);
         setLoading(false);
+        setScale(1.2);
+        setRotate(-10);
     },1000)
 
+    setTimeout(() => {
+        setRotate(8);
 
-    //framer motion logic
+    },1500)
+
+    setTimeout(() => {
+
+        setShoeSize(false);
+        setCheckoutButtontxt(true);
+        setScale(1);
+        setRotate(0);
+
+    },2000)
+
+
+
 
 
     
 
    
+
+}
+
+function handleShoeChange(newShoe) {
+    changeShoe(newShoe);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+
+    setTimeout(() => {
+        setFooter(false);
+    },1000);
 
 }
 
@@ -369,6 +400,7 @@ function loader() {
                 <div id='image-section'>
                     <div id='img-container'>
                      <Button id='shoetype-button' circular compact >{shoe.type}</Button>
+                     <div id='img-placeholder'></div>
                     </div>
                     <div id='size-selection'>
                         
@@ -401,7 +433,7 @@ function loader() {
                     <div id='checkout'>
                         <div id='checkout-flex-container'>
                             <div id='add-container'>
-                                {shoeSize ? <Button id='size-button' loading={loading} onClick={() => loader()} ><div id='checkout-div'><p id='checkout-text'>Add size: {shoeSize} to cart</p></div></Button>
+                                {shoeSize ? <Button id='size-button' loading={loading} onClick={() => loader()} ><div id='checkout-div'>{checkoutButtontxt ? <p id='checkout-text'>Add size: {shoeSize} to cart</p> : <p id='checkout-text'>{shoeSize} added to cart</p> }</div></Button>
                                 : <div id='size-button-alt' >
                                         <RevealMine posX={100} delay={0.7} id='reveal-div-size'>
                                             
@@ -423,7 +455,13 @@ function loader() {
                             <div>
                                 <Link to='/checkout'>
                                     <Button basic color='black' animated='vertical'>
-                                        <div id='checkout-button'>
+                                        <motion.div id='checkout-button' initial={{ scale: 0 }}
+                                                animate={{ scale: scale, rotate: rotate }}
+                                                transition={{
+                                                type: "spring",
+                                                stiffness: 260,
+                                                damping: 20
+                                                }}>
                                             <Button.Content visible>
                                             <Icon.Group>
                                                 <Icon size='big' color='black'  id='shopping-trolley' name='shop'/>
@@ -435,7 +473,7 @@ function loader() {
                                                 {cart.length > 0 ? <p  id='checkout-text'>Checkout</p> : <p id='checkout-text'>Cart Empty</p>}
                                             </Button.Content>
                                             
-                                        </div>
+                                        </motion.div>
                                     </Button>
                                 </Link>
                             </div>
@@ -485,29 +523,21 @@ function loader() {
 
             <div id='card-container'>
 
-                <div id='card-child'>
+                <div id='card-child' onClick={() => handleShoeChange(threeShoes[0])}>
                     <RevealMine  posY={200} delay={0.5}>
                         <Card shoe={threeShoes[0]} />
                     </RevealMine>
                 </div>
-                <div id='card-child'>
-                    <RevealMine posY={200} delay={0.7}>
+                <div id='card-child' onClick={() => handleShoeChange(threeShoes[1])}>
+                    <RevealMine posY={200} delay={0.8}>
                         <Card shoe={threeShoes[1]}/>
                     </RevealMine>
                 </div>
-                <div id='card-child'>
-                    <RevealMine posY={200} delay={0.9}>
+                <div id='card-child' onClick={() => handleShoeChange(threeShoes[2])}>
+                    <RevealMine posY={200} delay={1.1}>
                         <Card shoe={threeShoes[2]}/>
                     </RevealMine>
                 </div>
-                <div id='card-child'>
-                    <RevealMine posY={200} delay={1.1}>
-                        <Card shoe={threeShoes[0]}/>
-                    </RevealMine>
-                </div>
-
-
-
             </div>
               
             

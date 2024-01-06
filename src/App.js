@@ -48,7 +48,7 @@ function App() {
     <div className="App">
       <Routes>
         <Route  path='/' element={<Home cart={cart} pushCart={pushCart} changeShoe={changeShoe}filterCart={filterCart} subtotal={subtotal} />}/>
-        <Route path='/selectedShoe' element={<SelectedShoe pushCart={pushCart} cart={cart} shoe={selectedShoe}/>} />
+        <Route path='/selectedShoe' element={<SelectedShoe pushCart={pushCart} changeShoe={changeShoe} cart={cart} shoe={selectedShoe}/>} />
         <Route path='/checkout' element={<Checkout cart={cart} filterCart={filterCart} subtotal={subtotal}/>}/>
       </Routes>
 

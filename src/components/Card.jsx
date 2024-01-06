@@ -1,4 +1,5 @@
 import '../styling/Card.css';
+import {motion} from 'framer-motion';
 
 
 export default function Card({shoe}) {
@@ -8,16 +9,22 @@ export default function Card({shoe}) {
 
 
     return(
-        <div id="card-border">
+        <motion.div id="card-border" whileHover={{
+            scale: 1.1,
+            transition: { type: "spring",
+            stiffness: 260,
+            damping: 20 },
+          }}
+          whileTap={{ scale: 0.9 }}>
             <div id="picture-container">
-                <p>{shoe.name}</p>
             </div>
             <div id="info-section">
-                <div id="title-holder">
 
-                </div>
+                    <p>{shoe.name}</p>
+     
+                
             </div>
-        </div>
+        </motion.div>
     )
 }
 
