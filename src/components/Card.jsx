@@ -15,7 +15,8 @@ export default function Card({shoe}) {
             stiffness: 260,
             damping: 20 },
           }}
-          whileTap={{ scale: 0.9 }}>
+          whileTap={{ scale: 0.9 }}
+          >
             <div id="picture-container">
             </div>
             <div id="info-section">

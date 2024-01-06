@@ -1,3 +1,23 @@
+#checkout-header {
+    height: 10vh;
+    width: 100vw;
+    background-color:  #494F55;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#checkout-header p {
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 2.6rem;
+    color: white;
+}
+
+#checkout-img-section h2 {
+    font-family: 'Comfortaa', sans-serif;
+    font-style: normal;
+}
+
+
 
 
 #checkout-container-flex {
@@ -5,30 +25,34 @@
     align-items: center;
     justify-content: center;
     width: 100vw;
-    height: 100vh;
+    height: 90vh;
+    background-color: aliceblue;
+}
+
+#checkout-wrapper {
     background-color: white;
+    padding: 30px;
 }
 
 #checkout-flex-child {
     height: 75vh;
-    width: 60vw;
-    
+    width: 60vw;    
     display: flex;
 }
 
 #checkout-img-section {
     height: 100%;
     width: 50%;
-    border-left: rgb(0, 0, 0) 1px solid;
-    border-top: rgb(0, 0, 0) 1px solid;
-    border-bottom: rgb(0, 0, 0) 1px solid;
+    
+
+  
 }
 
 #checkout-shoe-section {
     height: 100%;
     width: 50%;
-    border-top: rgb(0, 0, 0) 1px solid;
-    border-bottom: rgb(0, 0, 0) 1px solid;
+ 
+   
 }
 
 #flex-container-ch {
@@ -46,7 +70,7 @@
     background-color: rgb(243, 243, 243);
     border: 1px black solid;
     border-radius: 5px;
-    cursor: pointer;
+    
     box-sizing: border-box;
 }
 
@@ -106,6 +130,7 @@
 }
 #wider-button {
     width: 55px;
+    cursor: pointer;
 }
 
 #arrow-icon-ch {
@@ -133,11 +158,22 @@
 
 #subtotal-container {
     height: 5%;
+    border-radius: 7.5px;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    background-color: aliceblue;
+    background-color:  #494F55;;
+    color: aliceblue;
+}
+
+#connector {
+    background-color: #494F55;
+    height: 100%;
+    width: 50px;
+    position: absolute;
+    right: -25px;
 }
 
 #subtotal-child {
@@ -147,6 +183,15 @@
     align-items: center;
    
 }
+
+#subtotal-child p {
+    font-family: 'Kumbh Sans', sans-serif;
+    font-weight: 300;
+    font-size: 1.3rem;
+    color: white;
+}
+
+
 
 #close-modal {
     position: absolute;
@@ -202,7 +247,7 @@
 }
 #shipping-checkout {
     display: flex;
-    height: 35%;
+    height: 32.5%;
     width: 100%;
     flex-direction: column;
     align-items: center;
@@ -210,7 +255,7 @@
 }
 
 #shipping-delivery {
-    height: 20%;
+    height: 17.5%;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -310,6 +355,60 @@
     width: 80%;
     justify-content: space-between;
 }
+
+#empty-cart {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#empty-cart-p-container {
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#empty-cart-p-container p {
+    padding: 5px;
+    color: black;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-weight: 300;
+}
+
+#subtotal-right-side {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5%;
+    background-color: #494F55;
+    width: 100%;
+    border-radius: 7.5px;
+}
+
+#subtotal-right-side p {
+    font-family: 'Kumbh Sans', sans-serif;
+    font-weight: 300;
+    font-size: 1.3rem;
+    color: white;
+
+}
+
+h4 {
+    font-family: 'Tektur', sans-serif;
+}
+
+h3 {
+    font-family: 'Kumbh Sans', sans-serif;
+    font-weight: 300;
+}
+
+#price-remove-ch p {
+    font-family: 'Kumbh Sans', sans-serif;
+    font-weight: 300;
+}
+
+
 
 
 

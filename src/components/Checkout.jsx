@@ -2,20 +2,18 @@ import { Link } from "react-router-dom";
 import '../styling/Checkout.css';
 import { Button, Icon } from "semantic-ui-react";
 import { useState } from "react";
-import { Modal, Box } from "@mui/material";
 import PaymentButton from "./PaymentButton";
+import {motion} from 'framer-motion';
 
 export default function Checkout({cart, filterCart, subtotal}) {
-
-    const [openDetails, setOpenDetails] = useState(false);
-    const handleOpenDetails = () => setOpenDetails(true);
-    const handleCloseDetails = () => setOpenDetails(false); 
-
    
 
     const handleExpress = () => {
+        setDelivery('3')
+
         if (express) {
             setExpress(!express);
+            setDelivery('7')
             return;
         }
 
@@ -32,6 +30,8 @@ export default function Checkout({cart, filterCart, subtotal}) {
     }
 
     const handleStandard = () => {
+
+        setDelivery('7')
         if (standard) {
             setStandard(!standard);
             return;
@@ -50,44 +50,25 @@ export default function Checkout({cart, filterCart, subtotal}) {
     }
 
 
-
-    const styleDetails = {
-        position: 'absolute', top: '50%', left: '50%', padding: 0, marginLeft:'-600px', marginTop: '-400px',
-        width: '1200px', height: '800px', bgcolor: 'white', border: '2px solid #000', boxShadow: 24, p: 4
-      };
-
       
 
       const [express, setExpress] = useState(false);
       const [standard, setStandard] = useState(false);
+      const [delivery, setDelivery] = useState('7')
 
     return(
         <>
 
-            <Modal open={openDetails} onClose={handleCloseDetails} aria-labelledby="modal-modal-title" aria-describedby="modal-modal-description">  
-                <Box sx={styleDetails}>
-                    <div id="style-details-container">
-        <div id="close-modal" onClick={() => handleCloseDetails()}><Icon name="close"/></div>
-
-                        <div id="shoe-header"></div>
-                        <div id="shoe-description">
-                            <div id='text-component'>
-                            </div>
-                            <div id="image-component">
-                            </div>    
-                        </div>
-                        <div id="worn-by"></div>
-
-                    </div>
-                </Box> 
-            </Modal> 
-
-
+        <div id="checkout-header">
+            <p>Checkout</p>
+        </div>
         <div id="checkout-container-flex">
+            <div id="checkout-wrapper">
             <div id="checkout-flex-child">
             <div id="checkout-shoe-section">
                 <div id="checkout-map">
-                {cart.map((shoe, index) => {
+                {(cart.length > 0) ? 
+                <div>{cart.map((shoe, index) => {
                         return (
                             <div key={index} id="flex-container-ch">
                                 
@@ -97,24 +78,43 @@ export default function Checkout({cart, filterCart, subtotal}) {
                                        
                                     </div>
                                     <div>
-                                        <h4>Size {shoe.size}</h4>
+                                        <p>Size {shoe.size}</p>
                                     </div>
-                                    <div id='price-remove-ch'>
-                                        <div><p>${shoe.price}.00 AUD</p></div>
-                                    </div>
+                                    
                                 </div>
                                 <div id='img-section-ch'>
                                     <p>img here</p>
                                 </div>
                                 <div id="quantity-delete">
+                        
+                                    <div id='price-remove-ch'>
+                                        <div><p>${shoe.price}.00 AUD</p></div>
+                                    </div>
                                     <div id='button-container-ch' onClick={() => {filterCart(shoe.id)}}><Button compact basic color="red"><div id="wider-button">Remove</div></Button></div>
-                                    <div id='button-container-ch' onClick={() => {handleOpenDetails()}}><Button compact basic color="black"><div id="wider-button">Details</div></Button></div>
+
                                 </div>
                             </div>
-                        )})}
+                        )})}</div>
+                        :
+                        <div id="empty-cart">
+                            <motion.div id="empty-cart-p-container"
+                                    whileHover={{
+                                        scale: 1.1,
+                                        transition: { type: "spring",
+                                        stiffness: 260,
+                                        damping: 20 },
+                                      }}
+                                      whileTap={{ scale: 0.9 }}>
+                                        <Link to='/'>
+                                <p id="empty-txt">Cart is empty... Go Home?</p>
+                                </Link>
+                                </motion.div>
+                            </div>}
+
             
                 </div>
                 <div id="subtotal-container">
+                    <div id="connector"></div>
                     <div id="subtotal-child">
                         <p>Subtotal ${subtotal}.00 AUD</p>
                     </div>
@@ -148,27 +148,26 @@ export default function Checkout({cart, filterCart, subtotal}) {
                         </div>
                         <div id="buttonlayer">
                             <PaymentButton color={'white'} paymentName={'Google Pay'} paymentIcon={'google'} txtColor={'black'} borderColorTop={'3px solid #EA4335'} borderColorRight={'3px solid #4285F2'} borderColorBottom={'3px solid #34A853'} borderColorLeft={'3px solid #FBBC05'} pointer={'pointer'}/>
-                            <PaymentButton color={'white'} paymentName={'Apple Pay'} paymentIcon={'apple'} txtColor={'black'} borderColorTop={'1px solid black'} borderColorRight={'1px solid black'} borderColorBottom={'1px solid black'} borderColorLeft={'1px solid black'} pointer={'pointer'}/>
+                            <PaymentButton color={'white'} paymentName={'Credit Card'} paymentIcon={'credit card outline'} txtColor={'black'} borderColorTop={'1px solid black'} borderColorRight={'1px solid black'} borderColorBottom={'1px solid black'} borderColorLeft={'1px solid black'} pointer={'pointer'}/>
                         </div>
                        
                     
                     
                     </div>
                     </div>
+                    <div id="subtotal-right-side">
+                        <p>Est. delivery time {delivery} days</p>
+                    </div>
                 </div>
                 
 
                     
 
-            
+                </div>
 
             </div>
 
             </div>
-
-            <Link to='/'>
-                home
-            </Link>
         </>
     )
 }
