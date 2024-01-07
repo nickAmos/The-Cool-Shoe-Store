@@ -6,13 +6,13 @@ Tasks to complete:
     - selected shoe
     - checkout
 - image collected and defualt sizing
-- generate descriptions of shoes (ChatGPT)
 - generate list of pro runners (ChatGPT)
 - style checkout and selected shoe pages 
 - Complete modal for details
 - Complete modal for checkout
 -  Responsivness for all
 - refresh returns you to home page
+-fix padding of size buttons.
 
 Shoes: 
     - Race:

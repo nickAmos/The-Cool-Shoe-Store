@@ -63,6 +63,15 @@
     
 }
 
+#button-div-button {
+    
+    color: #494F55;
+}
+
+#check-container {
+    width: 50px;
+}
+
 #grid-container-size {
     display: grid;
     height: 90%;

@@ -80,22 +80,22 @@ export default function SelectedShoe({shoe, pushCart, cart, changeShoe}) {
 
 
 
-    const [color6, setColor6] = useState('grey');
-    const [color65, setColor65] = useState('grey');
-    const [color7, setColor7] = useState('grey');
-    const [color75, setColor75] = useState('grey');
-    const [color8, setColor8] = useState('grey');
-    const [color85, setColor85] = useState('grey');
-    const [color9, setColor9] = useState('grey');
-    const [color95, setColor95] = useState('grey');
-    const [color10, setColor10] = useState('grey');
-    const [color105, setColor105] = useState('grey');
-    const [color11, setColor11] = useState('grey');
-    const [color115, setColor115] = useState('grey');
-    const [color12, setColor12] = useState('grey');
-    const [color125, setColor125] = useState('grey');
-    const [color13, setColor13] = useState('grey');
-    const [color135, setColor135] = useState('grey');
+    const [color6, setColor6] = useState(false);
+    const [color65, setColor65] = useState(false);
+    const [color7, setColor7] = useState(false);
+    const [color75, setColor75] = useState(false);
+    const [color8, setColor8] = useState(false);
+    const [color85, setColor85] = useState(false);
+    const [color9, setColor9] = useState(false);
+    const [color95, setColor95] = useState(false);
+    const [color10, setColor10] = useState(false);
+    const [color105, setColor105] = useState(false);
+    const [color11, setColor11] = useState(false);
+    const [color115, setColor115] = useState(false);
+    const [color12, setColor12] = useState(false);
+    const [color125, setColor125] = useState(false);
+    const [color13, setColor13] = useState(false);
+    const [color135, setColor135] = useState(false);
 
     const [shoeSize, setShoeSize] = useState(false);
     const [loading, setLoading] = useState(false);
@@ -129,93 +129,93 @@ export default function SelectedShoe({shoe, pushCart, cart, changeShoe}) {
 
 useEffect(() => {
     if (shoeSize === 6) {
-        setColor6('black');
+        setColor6(true);
     } else {
-        setColor6('grey');
+        setColor6(false);
     }
 
     if (shoeSize ===6.5) {
-       setColor65('black');    
+       setColor65(true);    
     }else {
-        setColor65('grey');
+        setColor65(false);
     }
 
      if (shoeSize === 7) {
-        setColor7('black'); 
+        setColor7(true); 
     } else {
-        setColor7('grey');
+        setColor7(false);
     }
     
     if (shoeSize ===7.5) {
-        setColor75('black'); 
+        setColor75(true); 
       
     }  else {
-        setColor75('grey');
+        setColor75(false);
     }
 
 
     if (shoeSize === 8) {
-        setColor8('black');  
+        setColor8(true);  
     } else {
-        setColor8('grey');
+        setColor8(false);
     }
 
     if (shoeSize ===8.5) {
-        setColor85('black'); 
+        setColor85(true); 
        
-    }  else setColor85('grey');
+    }  else setColor85(false);
 
 
      if (shoeSize === 9) {
-        setColor9('black'); 
+        setColor9(true); 
         
-    }  else setColor9('grey');
+    }  else setColor9(false);
     
     if (shoeSize === 9.5) {
-       setColor95('black'); 
+       setColor95(true); 
         
-    }  else setColor95('grey');
+    }  else setColor95(false);
 
 
     if (shoeSize === 10) {
-       setColor10('black');     
-    } else setColor10('grey');
+       setColor10(true);     
+    } else setColor10(false);
     
     if (shoeSize === 10.5) {
-        setColor105('black'); 
-    } else {setColor105('grey');}
+        setColor105(true); 
+    } else {setColor105(false);}
 
 
      if (shoeSize === 11) {
-        setColor11('black'); 
+        setColor11(true); 
      
-    } else setColor11('grey');
+    } else setColor11(false);
 
 
      if (shoeSize === 11.5) {
-        setColor115('black');  
-    } else {setColor115('grey');}
+        setColor115(true);  
+    } else {setColor115(false);}
     
     
     if (shoeSize === 12) {
-     setColor12('black'); 
+     setColor12(true); 
          
-    }else {setColor12('grey');}
+    }else {setColor12(false);}
     
     
     if (shoeSize === 12.5) {
-         setColor125('black'); 
+         setColor125(true); 
         
-    }  else setColor125('grey');
+    }  else setColor125(false);
     
     if (shoeSize === 13) {
-        setColor13('black'); 
-    }  else {setColor13('grey');}
+        setColor13(true); 
+    }  else {setColor13(false);}
     
     if (shoeSize === 13.5) {
-         setColor135('black'); 
+         setColor135(true); 
         
-    }  else setColor135('grey');
+    }  else setColor135(false);
 
 
 }, [shoeSize])
@@ -406,22 +406,22 @@ function handleShoeChange(newShoe) {
                         
 
                         <div id='grid-container-size'>
-                            <div id='button-div'><Button id='button-div-button'  basic  color={color6} onClick={() => handlesizechange(6)}><p>6 AU</p></Button></div>
-                            <div id='button-div'><Button id='button-div-button' basic color={color65} onClick={() => handlesizechange(6.5)}><p>6.5 AU</p></Button></div>
-                            <div id='button-div'><Button id='button-div-button' basic color={color7} onClick={() => handlesizechange(7)}><p>7 AU</p></Button></div>
-                            <div id='button-div'><Button id='button-div-button' basic color={color75} onClick={() => handlesizechange(7.5)}><p>7.5 AU</p></Button></div>
-                            <div id='button-div'><Button id='button-div-button' basic color={color8} onClick={() => handlesizechange(8)}><p>8 AU</p></Button></div>
-                            <div id='button-div'><Button id='button-div-button' basic color={color85} onClick={() => handlesizechange(8.5)}><p>8.5 AU</p></Button></div>
-                            <div id='button-div'><Button id='button-div-button' basic color={color9} onClick={() => handlesizechange(9)}><p>9 AU</p></Button></div>
-                            <div id='button-div'><Button id='button-div-button' basic color={color95} onClick={() => handlesizechange(9.5)}><p>9.5 AU</p></Button></div>
-                            <div id='button-div'><Button id='button-div-button' basic color={color10} onClick={() =>  handlesizechange(10)}><p>10 AU</p></Button></div>
-                            <div id='button-div'><Button id='button-div-button' basic color={color105} onClick={() => handlesizechange(10.5)}><p>10.5 AU</p></Button></div>
-                            <div id='button-div'><Button id='button-div-button' basic color={color11} onClick={() =>  handlesizechange(11)}><p>11 AU</p></Button></div>
-                            <div id='button-div'><Button id='button-div-button'  basic color={color115} onClick={() => handlesizechange(11.5)}><p>11.5 AU</p></Button></div>
-                            <div id='button-div'><Button id='button-div-button' basic color={color12} onClick={() =>  handlesizechange(12)}><p>12 AU</p></Button></div>
-                            <div id='button-div'><Button id='button-div-button' basic color={color125} onClick={() => handlesizechange(12.5)}><p>12.5 AU</p></Button></div>
-                            <div id='button-div'><Button id='button-div-button' basic color={color13} onClick={() =>  handlesizechange(13)}><p>13 AU</p></Button></div>
-                            <div id='button-div'><Button id='button-div-button' basic color={color135} onClick={() => handlesizechange(13.5)}><p>13.5 AU</p></Button></div>
+                            <motion.div whileHover={{scale: 1.1,transition: { type: "spring",stiffness: 260,damping: 20 },}}whileTap={{ scale: 0.9 }} id='button-div'><Button id='button-div-button'  onClick={() => handlesizechange(6)}>{!color6 ? <p>6 AU</p>: <div id='check-container'><Icon name='check' size='large'/></div>}</Button></motion.div>
+                            <motion.div whileHover={{scale: 1.1,transition: { type: "spring",stiffness: 260,damping: 20 },}}whileTap={{ scale: 0.9 }} id='button-div'><Button id='button-div-button' onClick={() => handlesizechange(6.5)}>  {!color65 ? <p>6.5 AU</p>: <div id='check-container'><Icon name='check' size='large'/></div>}</Button></motion.div>
+                            <motion.div whileHover={{scale: 1.1,transition: { type: "spring",stiffness: 260,damping: 20 },}}whileTap={{ scale: 0.9 }} id='button-div'><Button id='button-div-button'  onClick={() => handlesizechange(7)}>  {!color7 ? <p>7 AU</p>: <div id='check-container'><Icon name='check' size='large'/></div>}</Button></motion.div>
+                            <motion.div whileHover={{scale: 1.1,transition: { type: "spring",stiffness: 260,damping: 20 },}}whileTap={{ scale: 0.9 }} id='button-div'><Button id='button-div-button' onClick={() => handlesizechange(7.5)}>  {!color75 ? <p>7.5 AU</p>: <div id='check-container'><Icon name='check' size='large'/></div>}</Button></motion.div>
+                            <motion.div whileHover={{scale: 1.1,transition: { type: "spring",stiffness: 260,damping: 20 },}}whileTap={{ scale: 0.9 }} id='button-div'><Button id='button-div-button'  onClick={() => handlesizechange(8)}>  {!color8 ? <p>8 AU</p>: <div id='check-container'><Icon name='check' size='large'/></div>}</Button></motion.div>
+                            <motion.div whileHover={{scale: 1.1,transition: { type: "spring",stiffness: 260,damping: 20 },}}whileTap={{ scale: 0.9 }} id='button-div'><Button id='button-div-button' onClick={() => handlesizechange(8.5)}>  {!color85 ? <p>8.5 AU</p>: <div id='check-container'><Icon name='check' size='large'/></div>}</Button></motion.div>
+                            <motion.div whileHover={{scale: 1.1,transition: { type: "spring",stiffness: 260,damping: 20 },}}whileTap={{ scale: 0.9 }} id='button-div'><Button id='button-div-button'  onClick={() => handlesizechange(9)}>  {!color9 ? <p>9 AU</p>: <div id='check-container'><Icon name='check' size='large'/></div>}</Button></motion.div>
+                            <motion.div whileHover={{scale: 1.1,transition: { type: "spring",stiffness: 260,damping: 20 },}}whileTap={{ scale: 0.9 }} id='button-div'><Button id='button-div-button' onClick={() => handlesizechange(9.5)}>  {!color95 ? <p>9.5 AU</p>: <div id='check-container'><Icon name='check' size='large'/></div>}</Button></motion.div>
+                            <motion.div whileHover={{scale: 1.1,transition: { type: "spring",stiffness: 260,damping: 20 },}}whileTap={{ scale: 0.9 }} id='button-div'><Button id='button-div-button' onClick={() =>  handlesizechange(10)}>  {!color10 ? <p>10 AU</p>: <div id='check-container'><Icon name='check' size='large'/></div>}</Button></motion.div>
+                            <motion.div whileHover={{scale: 1.1,transition: { type: "spring",stiffness: 260,damping: 20 },}}whileTap={{ scale: 0.9 }} id='button-div'><Button id='button-div-button'  onClick={() => handlesizechange(10.5)}>  {!color105 ? <p>10.5 AU</p>: <div id='check-container'><Icon name='check' size='large'/></div>}</Button></motion.div>
+                            <motion.div whileHover={{scale: 1.1,transition: { type: "spring",stiffness: 260,damping: 20 },}}whileTap={{ scale: 0.9 }} id='button-div'><Button id='button-div-button' onClick={() =>  handlesizechange(11)}>  {!color11 ? <p>11 AU</p>: <div id='check-container'><Icon name='check' size='large'/></div>}</Button></motion.div>
+                            <motion.div whileHover={{scale: 1.1,transition: { type: "spring",stiffness: 260,damping: 20 },}}whileTap={{ scale: 0.9 }} id='button-div'><Button id='button-div-button'   onClick={() => handlesizechange(11.5)}> {!color115 ? <p>11.5 AU</p>: <div id='check-container'><Icon name='check' size='large'/></div>}</Button></motion.div>
+                            <motion.div whileHover={{scale: 1.1,transition: { type: "spring",stiffness: 260,damping: 20 },}}whileTap={{ scale: 0.9 }} id='button-div'><Button id='button-div-button'  onClick={() =>  handlesizechange(12)}> {!color12 ? <p>12 AU</p>: <div id='check-container'><Icon name='check' size='large'/></div>}</Button></motion.div>
+                            <motion.div whileHover={{scale: 1.1,transition: { type: "spring",stiffness: 260,damping: 20 },}}whileTap={{ scale: 0.9 }} id='button-div'><Button id='button-div-button'  onClick={() => handlesizechange(12.5)}>  {!color125 ? <p>12.5 AU</p>: <div id='check-container'><Icon name='check' size='large'/></div>}</Button></motion.div>
+                            <motion.div whileHover={{scale: 1.1,transition: { type: "spring",stiffness: 260,damping: 20 },}}whileTap={{ scale: 0.9 }} id='button-div'><Button id='button-div-button' onClick={() =>  handlesizechange(13)}>  {!color13 ? <p>13 AU</p>: <div id='check-container'><Icon name='check' size='large'/></div>}</Button></motion.div>
+                            <motion.div whileHover={{scale: 1.1,transition: { type: "spring",stiffness: 260,damping: 20 },}}whileTap={{ scale: 0.9 }} id='button-div'><Button id='button-div-button'  onClick={() => handlesizechange(13.5)}>  {!color135 ? <p>13.5 AU</p>: <div id='check-container'><Icon name='check' size='large'/></div>}</Button></motion.div>
                         </div>
 
                         </div>
