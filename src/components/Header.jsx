@@ -91,8 +91,8 @@ const handleCloseCart = () => setOpenCart(false);
                             <div className='icon-container' onClick={handleOpenCart}>
                                 <Button.Content visible>
                                                 <Icon.Group>
-                                                    <Icon size='big' color='black' id='shopping-trolley' name='shop'/>
-                                                    <Icon corner='top right'><Button id='cartcounter' circular compact color='black' size='mini' >{cart.length}</Button></Icon>
+                                                    <Icon size='big' color='white' id='shopping-trolley' name='shop'/>
+                                                    <Icon corner='top right'><Button id='cartcounter' circular compact color='white' size='mini' >{cart.length}</Button></Icon>
                                                 </Icon.Group>
                                 </Button.Content>
                             </div>
@@ -127,11 +127,11 @@ const handleCloseCart = () => setOpenCart(false);
                 <div id='scrolling-banner'>
                     <div id='scroll'>
                         <div id='right-left-middle'>
-                            I am literally so good at chess its insane, i dont lose, i play kings indian and i cannot lose because my position is so good
+                            Shop top of the range shoes for both race events and every day training. We currently stock Nike, Saucony and Adidas. 
                             <span></span>
                         </div>
                         <div id='right-left-LHS'>
-                            I am literally so good at chess its insane, i dont lose, i play kings indian and i cannot lose because my position is so good
+                            Shop top of the range shoes for both race events and every day training. We currently stock Nike, Saucony and Adidas.
                             <span></span>
                         </div>
                     </div>

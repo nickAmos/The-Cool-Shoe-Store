@@ -4,16 +4,34 @@
     background-color:  #494F55;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+
+    
 }
-#checkout-header p {
-    font-family: 'Comfortaa', sans-serif;
+
+#checkout-txt {
+    height: 50px;
+    width: 200px;
+}
+
+#home-container {
+    height: 50px;
+    margin-left: 25px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.1rem;
+}
+#checkout-txt p {
+    font-family: 'Tektur', sans-serif;
     font-size: 2.6rem;
     color: white;
 }
 
 #checkout-img-section h2 {
-    font-family: 'Comfortaa', sans-serif;
+    font-family: 'Tektur', sans-serif;
     font-style: normal;
 }
 
@@ -95,6 +113,8 @@
     flex-direction: column;
     align-items: flex-start;
     padding-left: 10px;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-weight: 300;
     
 }
 
@@ -102,7 +122,7 @@
     width: 30%;
     height: 80%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     flex-direction: column-reverse;
 }
@@ -115,6 +135,7 @@
 
 #name-exit-ch p {
     padding-right: 10px;
+   
 }
 
 #price-remove-ch {
@@ -300,6 +321,14 @@
     align-items: center;
     justify-content: center;
 }
+
+#input-child-primary input, #input-child-secondary input  {
+    font-family: 'Kumbh Sans', sans-serif;
+    font-weight: 300;
+    
+}
+
+
 
 #input-child-secondary {
     display: flex;

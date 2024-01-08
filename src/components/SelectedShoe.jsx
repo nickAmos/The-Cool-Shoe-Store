@@ -356,12 +356,13 @@ function loader() {
 
     setTimeout(() => {
         setRotate(8);
+        setShoeSize(false);
 
     },1500)
 
     setTimeout(() => {
 
-        setShoeSize(false);
+        
         setCheckoutButtontxt(true);
         setScale(1);
         setRotate(0);

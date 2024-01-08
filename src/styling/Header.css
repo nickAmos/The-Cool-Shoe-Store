@@ -3,13 +3,13 @@
 
 
 #header-container {
-    background-color: rgb(227, 237, 238);
+   
     width: 100vw;
     height: 15vh;
 }
 
 #middle-box h1 {
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Tektur', sans-serif;
     font-weight: 400;
     font-size: 4rem;
     
@@ -24,7 +24,7 @@ h2 {
 #navbar {
     height: 70%;
     width: 100%;
-    background-color: rgb(255, 255, 255);
+    background-color: #494F55;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -33,7 +33,7 @@ h2 {
 #scrolling-banner {
     height: 30%;
     width: 100%;
-    background-color: rgb(221, 248, 253);
+    background-color: aliceblue
     
 }
 
@@ -44,7 +44,7 @@ h2 {
     justify-content: space-between;
     height: 100%;
     width: 95%;
-    background-color: rgb(255, 255, 255);
+    background-color: #494F55;
 }
 
 #left-box, #middle-box, #right-box {
@@ -55,12 +55,14 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(255, 255, 255);
+    color: white;
+    background-color: #494F55;
 }
 
 .icon-container {
     height: auto;
     width: auto;
+    color: aliceblue;
     cursor: pointer;
 }
 
@@ -88,8 +90,9 @@ change this when making the banner*/
     text-align: justify;
     font-size: 1.7rem;
     color: rgb(0, 0, 0);
-    font-family: 'DotGothic16', sans-serif;
-    
+    font-family: 'Kumbh Sans', sans-serif;
+    font-weight: 300;
+    padding-left: 10px;
     animation: RightToLeftMiddle 15s infinite linear; 
 } 
 

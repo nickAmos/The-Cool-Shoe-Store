@@ -14,8 +14,8 @@ export default function PaymentButton({color, paymentName, paymentIcon, txtColor
     const [loading, setLoading] = useState(false);
 
     const stylePayment = {
-        position: 'absolute', top: '50%', left: '50%', padding: 0, marginLeft:'-600px', marginTop: '-400px',
-        width: '1200px', height: '800px', bgcolor: 'white', border: '2px solid #000', boxShadow: 24, p: 4
+        position: 'absolute', top: '50%', left: '50%', padding: 0, marginLeft:'-500px', marginTop: '-300px',
+        width: '1000px', height: '600px', bgcolor: 'white', border: '2px solid #000', boxShadow: 24, p: 4
       };
 
     const handleLoading = () => {
@@ -37,6 +37,17 @@ export default function PaymentButton({color, paymentName, paymentIcon, txtColor
 
             <Modal open={openDetails} onClose={handleCloseDetails} aria-labelledby="modal-modal-title" aria-describedby="modal-modal-description">  
                 <Box sx={stylePayment}>
+                    <div id="flex-flex">
+                        <div id="checkout-modal">
+                            <div id="text-box">
+                             <p>Text for post order button clickText for post order button clickText for post order button clickText for post order button clickText for post order button clickText for post order button clickText for post order button clickText for post order button clickText for post order button clickText for post order button clickText for post order button clickText for post order button clickText for post order button clickText for post order button clickText for post order button click</p>
+                            </div>
+                            <div id="credentials">
+                                <p>Github: Linkdin: </p>
+                            </div>
+
+                        </div>
+                    </div>
                 </Box> 
             </Modal> 
 

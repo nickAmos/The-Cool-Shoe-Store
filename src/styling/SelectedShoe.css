@@ -21,6 +21,10 @@
     background-color: #494F55;
 }
 
+#selected-footer {
+    background-color: aliceblue;
+}
+
 #main-flex-container {
     width: 80vw;
     height: 70vh;
@@ -70,6 +74,7 @@
 
 #check-container {
     width: 50px;
+    color: rgb(68, 76, 139);
 }
 
 #grid-container-size {
@@ -117,6 +122,9 @@
 
 #button-div {
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -313,7 +321,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #494F55;
+    background-color: aliceblue
 }
 
 #see-more-flex-child {
@@ -322,7 +330,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #494F55;
+    background-color: aliceblue
     
 }
 
@@ -330,16 +338,16 @@
     
     height: 100%;
     width: 5%;
-    border-top:  3px solid rgb(255, 243, 233);
-    border-bottom: 3px solid rgb(255, 243, 233);
+    border-top:  3px solid #494F55;
+    border-bottom: 3px solid #494F55;
 }
 
 #left-border {
-    border-left: 3px solid rgb(255, 243, 233);
+    border-left: 3px solid #494F55;
 }
 
 #right-border {
-    border-right: 3px solid rgb(255, 243, 233);
+    border-right: 3px solid #494F55;
 }
 
 #middle-content {
@@ -349,23 +357,23 @@
     justify-content: center;
     height: 100%;
     font-family: 'Kumbh Sans', sans-serif;
-    color: rgb(255, 243, 233);
+    color: #494F55;
 }
 
 #angle-down {
     padding-bottom: 5px;
-    color: rgb(255, 243, 233);
+    color: #494F55;
 }
 
 #angle-up {
     padding-bottom: 5px;
-    color: rgb(255, 243, 233);
+    color: #494F55;
 }
 
 #extended-footer {
     height: 500px;
     width: 100%;
-    background-color: #494F55;
+    background-color: aliceblue;
     display: flex;
     align-items: center;
     justify-content: center;

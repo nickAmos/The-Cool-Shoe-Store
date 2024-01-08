@@ -60,7 +60,16 @@ export default function Checkout({cart, filterCart, subtotal}) {
         <>
 
         <div id="checkout-header">
-            <p>Checkout</p>
+        <Link to='/'>
+            <div id="home-container">
+                
+                <div id="home-arrow"><Icon name="arrow alternate circle left outline" /></div>
+                <div id="home-arrow"><p>Return Home</p></div>
+                
+            </div>
+            </Link>
+            <div id="checkout-txt"><p>Checkout</p></div>
+            <div id="home-container"></div>
         </div>
         <div id="checkout-container-flex">
             <div id="checkout-wrapper">
