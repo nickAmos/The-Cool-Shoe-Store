@@ -62,9 +62,6 @@ export default function Home({changeShoe, cart, filterCart, subtotal}) {
                 <div id='social-icons'><Icon name='github'/><a href="https://github.com/nickAmos" target='_blank'>Github</a></div>
               </div>
               <div id='contact-container'>
-              <div id='social-icons'><Icon name='linkedin'/><a href="https://www.linkedin.com/in/nick-amos-2a2688247/" target="_blank">LinkedIn</a></div>
-              </div>
-              <div id='contact-container'>
                 {copied ? <div id='copied'>
                   <p>Copied!</p>
                   <div id='copied-container'>
@@ -75,7 +72,13 @@ export default function Home({changeShoe, cart, filterCart, subtotal}) {
                   <Icon name='mail'/><p id='email'>nick.amos2000@gmail.com</p>
                   </div>
               </div>
+              <div id='contact-container'>
+              <div id='social-icons'><Icon name='linkedin'/><a href="https://www.linkedin.com/in/nick-amos-2a2688247/" target="_blank">LinkedIn</a></div>
+              </div>
+              
             </div>
+
+            
         </footer>
         </>
     )

@@ -92,7 +92,7 @@ const handleCloseCart = () => setOpenCart(false);
                                 <Button.Content visible>
                                                 <Icon.Group>
                                                     <Icon size='big' color='white' id='shopping-trolley' name='shop'/>
-                                                    <Icon corner='top right'><Button id='cartcounter' circular compact color='white' size='mini' >{cart.length}</Button></Icon>
+                                                    <Icon corner='top right'><Button id='cartcounter' circular compact  size='mini' >{cart.length}</Button></Icon>
                                                 </Icon.Group>
                                 </Button.Content>
                             </div>

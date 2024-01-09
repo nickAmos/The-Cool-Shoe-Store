@@ -5,7 +5,7 @@ import { Modal, Box } from "@mui/material";
 
 
 
-export default function PaymentButton({color, paymentName, paymentIcon, txtColor, borderColorTop, borderColorLeft, borderColorRight, borderColorBottom, pointer}) {
+export default function PaymentButton({color, paymentName, paymentIcon, txtColor, borderColorTop, borderColorLeft, borderColorRight, borderColorBottom, pointer, subtotal, delivery}) {
 
     const [openDetails, setOpenDetails] = useState(false);
     const handleOpenDetails = () => setOpenDetails(true);
@@ -31,6 +31,24 @@ export default function PaymentButton({color, paymentName, paymentIcon, txtColor
         }, 2000)
     }
 
+    const [copied, setCopied] = useState(false);
+
+    function getEmail() {
+        let copyEmail = document.getElementById('email').innerHTML;
+        console.log(copyEmail);
+        navigator.clipboard.writeText(copyEmail);
+        
+        setTimeout(() => {
+          setCopied(true);
+        },0)
+    
+        setTimeout(() => {
+          setCopied(false);
+        },2000)
+    
+       
+      }
+
 
     return(
         <>
@@ -40,10 +58,27 @@ export default function PaymentButton({color, paymentName, paymentIcon, txtColor
                     <div id="flex-flex">
                         <div id="checkout-modal">
                             <div id="text-box">
-                             <p>Text for post order button clickText for post order button clickText for post order button clickText for post order button clickText for post order button clickText for post order button clickText for post order button clickText for post order button clickText for post order button clickText for post order button clickText for post order button clickText for post order button clickText for post order button clickText for post order button clickText for post order button click</p>
+                             <p><strong>Thank you for your order!</strong><br></br><br></br>Unfortunately you will <strong>not</strong> be receiving ${subtotal}.00 worth of shoes in {delivery} days time. This website is just a demonstration of my front-end development skills. If I have disappointed you please feel free to reach out using the links below, I'd be happy to explain why somethings are just too good to be true.   </p>
                             </div>
                             <div id="credentials">
-                                <p>Github: Linkdin: </p>
+                                <div id='contact-container'>
+                                        <div id='social-icons'><Icon name='github'/><a href="https://github.com/nickAmos" target='_blank'>Github</a></div>
+                                </div>
+                                <div id='contact-container'>
+                                        {copied ? <div id='copied'>
+                                        <p>Copied!</p>
+                                        <div id='copied-container'>
+                                            <Icon name='copy'/>
+                                            </div>
+                                     </div> :null}
+                                        <div onClick={() => getEmail()} id='social-icons'>
+                                        <Icon name='mail'/><p id='email'>nick.amos2000@gmail.com</p>
+                                </div>
+                                </div>
+                                <div id='contact-container'>
+                                    <div id='social-icons'><Icon name='linkedin'/><a href="https://www.linkedin.com/in/nick-amos-2a2688247/" target="_blank">LinkedIn</a></div>
+                                </div>
+                                
                             </div>
 
                         </div>

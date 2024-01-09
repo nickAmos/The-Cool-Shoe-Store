@@ -4,6 +4,8 @@ import { Button, Icon } from "semantic-ui-react";
 import { useState } from "react";
 import PaymentButton from "./PaymentButton";
 import {motion} from 'framer-motion';
+import ShoeForCheckout from "./ShoeForCheckout";
+
 
 export default function Checkout({cart, filterCart, subtotal}) {
    
@@ -79,30 +81,7 @@ export default function Checkout({cart, filterCart, subtotal}) {
                 {(cart.length > 0) ? 
                 <div>{cart.map((shoe, index) => {
                         return (
-                            <div key={index} id="flex-container-ch">
-                                
-                                <div id='text-section-ch'>
-                                    <div id='name-exi-ch'>
-                                        <h4>{shoe.name}</h4>
-                                       
-                                    </div>
-                                    <div>
-                                        <p>Size {shoe.size}</p>
-                                    </div>
-                                    
-                                </div>
-                                <div id='img-section-ch'>
-                                    <p>img here</p>
-                                </div>
-                                <div id="quantity-delete">
-                        
-                                    <div id='price-remove-ch'>
-                                        <div><p>${shoe.price}.00 AUD</p></div>
-                                    </div>
-                                    <div id='button-container-ch' onClick={() => {filterCart(shoe.id)}}><Button compact basic color="red"><div id="wider-button">Remove</div></Button></div>
-
-                                </div>
-                            </div>
+                            <ShoeForCheckout shoe={shoe} index={index} filterCart={filterCart} />
                         )})}</div>
                         :
                         <div id="empty-cart">
@@ -152,12 +131,12 @@ export default function Checkout({cart, filterCart, subtotal}) {
                     <div id="shipping-title-checkout"><h2>Payment Method</h2> </div>
                     <div id="paywithButtonContainer">
                         <div id="buttonlayer">
-                            <PaymentButton color={'black'} paymentName={'Apple Pay'} paymentIcon={'apple'} txtColor={'white'} borderColorTop={'1px solid black'}  borderColorRight={'1px solid black'} borderColorBottom={'1px solid black'} borderColorLeft={'1px solid black'} pointer={'pointer'}/>
-                            <PaymentButton color={'#FCBB32'} paymentName={'PayPal'} paymentIcon={'paypal'} txtColor={'#012169'} borderColorTop={'1px solid black'} borderColorRight={'1px solid black'} borderColorBottom={'1px solid black'} borderColorLeft={'1px solid black'} pointer={'pointer'}/>
+                            <PaymentButton delivery={delivery} subtotal={subtotal}  color={'black'} paymentName={'Apple Pay'} paymentIcon={'apple'} txtColor={'white'} borderColorTop={'1px solid black'}  borderColorRight={'1px solid black'} borderColorBottom={'1px solid black'} borderColorLeft={'1px solid black'} pointer={'pointer'}/>
+                            <PaymentButton delivery={delivery} subtotal={subtotal} color={'#FCBB32'} paymentName={'PayPal'} paymentIcon={'paypal'} txtColor={'#012169'} borderColorTop={'1px solid black'} borderColorRight={'1px solid black'} borderColorBottom={'1px solid black'} borderColorLeft={'1px solid black'} pointer={'pointer'}/>
                         </div>
                         <div id="buttonlayer">
-                            <PaymentButton color={'white'} paymentName={'Google Pay'} paymentIcon={'google'} txtColor={'black'} borderColorTop={'3px solid #EA4335'} borderColorRight={'3px solid #4285F2'} borderColorBottom={'3px solid #34A853'} borderColorLeft={'3px solid #FBBC05'} pointer={'pointer'}/>
-                            <PaymentButton color={'white'} paymentName={'Credit Card'} paymentIcon={'credit card outline'} txtColor={'black'} borderColorTop={'1px solid black'} borderColorRight={'1px solid black'} borderColorBottom={'1px solid black'} borderColorLeft={'1px solid black'} pointer={'pointer'}/>
+                            <PaymentButton delivery={delivery} subtotal={subtotal} color={'white'} paymentName={'Google Pay'} paymentIcon={'google'} txtColor={'black'} borderColorTop={'3px solid #EA4335'} borderColorRight={'3px solid #4285F2'} borderColorBottom={'3px solid #34A853'} borderColorLeft={'3px solid #FBBC05'} pointer={'pointer'}/>
+                            <PaymentButton delivery={delivery} subtotal={subtotal} color={'white'} paymentName={'Credit Card'} paymentIcon={'credit card outline'} txtColor={'black'} borderColorTop={'1px solid black'} borderColorRight={'1px solid black'} borderColorBottom={'1px solid black'} borderColorLeft={'1px solid black'} pointer={'pointer'}/>
                         </div>
                        
                     

@@ -2,21 +2,33 @@
 #container-shoe {
     height: 100%;
     width: 100%;
+    border: 2px solid black;
+    border-radius: 5px;
  }
+
+
 #image-placeholder {
     width: 100%;
     height: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(221, 248, 253);
+    
+}
+#shoe-txt-container {
+    background-color: #ffffff;
+    border-top: black solid 1px;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 #nameAndBrand, #typeAndPrice {
-    height: 10%;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    
 }
 
 #shoeName {
@@ -35,6 +47,8 @@
 
 img {
     aspect-ratio: auto;
+    max-width: 400px;
+    width: auto;
 
 }
 

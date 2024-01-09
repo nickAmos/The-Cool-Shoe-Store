@@ -29,7 +29,7 @@ export default function Filter({onSubmit, onClose}) {
         setNikeColor('black');
       }
 
-    if (brand === 'Saucany') {
+    if (brand === 'Saucony') {
       setSaucanyColor('teal');
     } else {
       setSaucanyColor('black');
@@ -105,10 +105,10 @@ export default function Filter({onSubmit, onClose}) {
     };
 
     const handelSaucany = () => {
-      if (brand !== 'Saucany') {
-        setBrand('Saucany');
+      if (brand !== 'Saucony') {
+        setBrand('Saucony');
 
-      } else if (brand === 'Saucany') {
+      } else if (brand === 'Saucony') {
         setBrand(null);
       }
     };

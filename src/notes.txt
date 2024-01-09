@@ -1,18 +1,22 @@
 
 
 Tasks to complete: 
-- Fonts for:
-    - home page
-    - selected shoe
-    - checkout
+
 - image collected and defualt sizing
-- generate list of pro runners (ChatGPT)
-- style checkout and selected shoe pages 
-- Complete modal for details
-- Complete modal for checkout
 -  Responsivness for all
-- refresh returns you to home page
--fix padding of size buttons.
+- Local storage:
+        - Preserve cart and selected shoe. 
+
+
+
+
+
+
+
+
+
+
+
 
 Shoes: 
     - Race:

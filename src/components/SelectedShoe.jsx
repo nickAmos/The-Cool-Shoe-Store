@@ -6,6 +6,7 @@ import RevealMine from './Reveal';
 import Card from './Card';
 import { NikeShoes, SaucShoes, AdidasShoes } from '../Shoes';
 import { motion } from "framer-motion";
+import getShoe from './GetShoe';
 
 
 
@@ -14,6 +15,7 @@ export default function SelectedShoe({shoe, pushCart, cart, changeShoe}) {
 
     const shoeName = shoe.name;
     const brand = shoe.brand;
+    let image = getShoe(shoe.name, '1000px', '300px')
 
     const filteredNike = NikeShoes.filter((shoe) => shoe.name !== shoeName);
     const filteredSauc = SaucShoes.filter((shoe) => shoe.name !== shoeName);
@@ -401,7 +403,7 @@ function handleShoeChange(newShoe) {
                 <div id='image-section'>
                     <div id='img-container'>
                      <Button id='shoetype-button' circular compact >{shoe.type}</Button>
-                     <div id='img-placeholder'></div>
+                     <div id='img-placeholder'>{image}</div>
                     </div>
                     <div id='size-selection'>
                         
@@ -466,7 +468,7 @@ function handleShoeChange(newShoe) {
                                             <Button.Content visible>
                                             <Icon.Group>
                                                 <Icon size='big' color='black'  id='shopping-trolley' name='shop'/>
-                                                <Icon corner='top right'><Button id='cartcounter' circular compact size='mini' >{cart.length}</Button></Icon>
+                                                <Icon corner='top right'><Button id='cartcounterss' circular compact size='mini' >{cart.length}</Button></Icon>
                                             </Icon.Group>
                                             </Button.Content>
                                             
