@@ -7,7 +7,7 @@ import {motion} from 'framer-motion';
 import ShoeForCheckout from "./ShoeForCheckout";
 
 
-export default function Checkout({cart, filterCart, subtotal}) {
+export default function Checkout({cart, filterCart, subtotal, changeShoe}) {
    
 
     const handleExpress = () => {
@@ -81,7 +81,7 @@ export default function Checkout({cart, filterCart, subtotal}) {
                 {(cart.length > 0) ? 
                 <div>{cart.map((shoe, index) => {
                         return (
-                            <ShoeForCheckout shoe={shoe} index={index} filterCart={filterCart} />
+                            <ShoeForCheckout changeShoe={changeShoe} shoe={shoe} index={index} filterCart={filterCart} />
                         )})}</div>
                         :
                         <div id="empty-cart">

@@ -79,14 +79,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 1px white solid;
+    border: 1px #494F55 solid;
     border-radius: 5px;
     margin-bottom: 30px;
 }
 
 #flex-container-ch:hover {
     background-color: rgb(243, 243, 243);
-    border: 1px black solid;
+    border: 1px #494F55 solid;
     border-radius: 5px;
     
     box-sizing: border-box;
@@ -96,13 +96,29 @@
     height: 75%;
     margin-bottom: 5px;
     width: 30%;
-    background-color: rgb(234, 234, 234);
     border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 5px;
+    margin: 5px;  
+     
+}
+
+#image-wrapper {
+    cursor: pointer;
+    width: 100%;
+    display:flex ;
+    align-items:center ;
+    justify-content:center;
+    border-radius: 7.5px;
     
+}
+
+#image-wrapper img {
+    max-width: 160px;
+    height: auto;
+    border-radius: 7.5px;
+   
 }
 
 #text-section-ch {

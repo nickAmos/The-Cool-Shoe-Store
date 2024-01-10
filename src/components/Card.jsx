@@ -1,10 +1,12 @@
 import '../styling/Card.css';
 import {motion} from 'framer-motion';
+import getShoe from './GetShoe';
 
 
 export default function Card({shoe}) {
 
 
+let image = getShoe(shoe.name, '350px', '175px');
 
 
 
@@ -18,6 +20,7 @@ export default function Card({shoe}) {
           whileTap={{ scale: 0.9 }}
           >
             <div id="picture-container">
+                {image}
             </div>
             <div id="info-section">
 

@@ -34,6 +34,30 @@
     text-align: justify;
 }
 
+#copied-checkout {
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    top: -90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+#copied-container-checkout {
+    background-color: #494F55;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    color: white;
+}
+
 strong {
     padding-right: 1px;
 }

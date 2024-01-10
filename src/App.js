@@ -7,6 +7,7 @@ import { useEffect, useState } from 'react';
 import Checkout from './components/Checkout';
 
 
+
 function App() {
 
  
@@ -41,6 +42,8 @@ function App() {
   const changeShoe = (shoe) => {
    
     setSelectedShoe(shoe);
+    
+    
   }
 
 
@@ -49,7 +52,7 @@ function App() {
       <Routes>
         <Route  path='/' element={<Home cart={cart} pushCart={pushCart} changeShoe={changeShoe}filterCart={filterCart} subtotal={subtotal} />}/>
         <Route path='/selectedShoe' element={<SelectedShoe pushCart={pushCart} changeShoe={changeShoe} cart={cart} shoe={selectedShoe}/>} />
-        <Route path='/checkout' element={<Checkout cart={cart} filterCart={filterCart} subtotal={subtotal}/>}/>
+        <Route path='/checkout' element={<Checkout cart={cart} filterCart={filterCart} subtotal={subtotal} changeShoe={changeShoe}/>}/>
       </Routes>
 
     </div>

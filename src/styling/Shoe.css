@@ -38,6 +38,7 @@
 
 #shoeType {
     padding-left: 5px;
+    padding-bottom: 3px;
     display: flex;
     align-items: center;
     justify-content: center;

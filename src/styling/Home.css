@@ -50,12 +50,13 @@ footer {
     color: white;
     cursor: pointer;
 }
-#social-icons a {
+#social-icons a, #social-icons p {
     padding-left: 5px;
     padding-top: 3px;
     font-family: 'Kumbh Sans', sans-serif;
     color: white;
-    font-weight: 500;
+    font-weight: 300;
+    font-size: 1.4rem;
 
 }
 

@@ -13,6 +13,7 @@ export default function ShoeForCart({shoe, filterCart, changeShoe}) {
         <>
                               
                                 <div id='text-section'>
+                                    <Link onClick={() => changeShoe(shoe)} id='text-link' to='/selectedShoe'>
                                     <div id='name-exit'>
                                         <h4>{shoe.name}</h4>
                                        
@@ -22,7 +23,8 @@ export default function ShoeForCart({shoe, filterCart, changeShoe}) {
                                     </div>
                                     <div id='price-remove'>
                                         <div><p>${shoe.price}.00 AUD</p></div>
-                                    </div>   
+                                    </div> 
+                                    </Link>  
                                 </div>
                                 <div id='img-section'>
                                     {image}

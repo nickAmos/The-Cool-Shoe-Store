@@ -65,9 +65,9 @@ export default function PaymentButton({color, paymentName, paymentIcon, txtColor
                                         <div id='social-icons'><Icon name='github'/><a href="https://github.com/nickAmos" target='_blank'>Github</a></div>
                                 </div>
                                 <div id='contact-container'>
-                                        {copied ? <div id='copied'>
+                                        {copied ? <div id='copied-checkout'>
                                         <p>Copied!</p>
-                                        <div id='copied-container'>
+                                        <div id='copied-container-checkout'>
                                             <Icon name='copy'/>
                                             </div>
                                      </div> :null}

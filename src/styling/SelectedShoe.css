@@ -30,8 +30,38 @@
     height: 70vh;
     display: flex;
     border-bottom: #494F55 solid 2px;
-    
+
+    position: relative;
 }
+
+#absol-left-side, #absol-left-top, #absol-right-top, #absol-right-side {
+    background-color: #494F55;
+    position: absolute;
+    z-index: 1;
+}
+
+#absol-left-side {
+    height: 30px;
+    width: 7px;
+}
+
+#absol-left-top {
+    height: 7px;
+    width: 30px;
+}
+
+#absol-right-top {
+    height: 7px;
+    width: 30px;
+    right: 0px;
+}
+
+#absol-right-side {
+    height: 30px;
+    width: 7px;
+    right: 0px;
+}
+
 
 #image-section, #description-section {
     width: 50%;
@@ -166,6 +196,7 @@
 
 
 #description-section {
+    
     display: flex;
     flex-direction: column;
     font-family: 'Kumbh Sans', sans-serif;
@@ -174,6 +205,8 @@
 
 }
 #shoe-name {
+    background-color: #e6e9ff;
+    border-radius: 7.5px;
     height: 20%;
     display: flex;
     flex-direction: column;
@@ -181,7 +214,26 @@
     align-items: flex-start;
     padding-right: 10px;
     padding-left: 10px;
+    position: relative;
     
+}
+
+#absol-joiner-left {
+    position: absolute;
+    bottom: -10px;
+    left: 0px;
+    width: 5px;
+    height: 20px;
+    background-color: #e6e9ff ;
+}
+
+#absol-joiner-right {
+    position: absolute;
+    bottom: -10px;
+    right: 0px;
+    width: 5px;
+    height: 20px;
+    background-color: #e6e9ff ;
 }
 
 #shoe-name h1 {
@@ -207,7 +259,9 @@
 }
 
 #description {
+    background-color: #e6e9ff;
     height: 35%;
+    border-radius: 7.5px;
     padding-left: 15px;
     padding-right: 15px;
     display: flex;

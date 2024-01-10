@@ -400,6 +400,12 @@ function handleShoeChange(newShoe) {
         </div>
         <div id='main-section'>
             <div id='main-flex-container'>
+
+                <div id='absol-left-side'></div>
+                <div id='absol-left-top'></div>
+                <div id='absol-right-top'></div>
+                <div id='absol-right-side'></div>
+
                 <div id='image-section'>
                     <div id='img-container'>
                      <Button id='shoetype-button' circular compact >{shoe.type}</Button>
@@ -431,7 +437,11 @@ function handleShoeChange(newShoe) {
                         
                 </div>
                 <div id='description-section'>
-                    <div id='shoe-name'><h1>{shoe.name}</h1><h2>${shoe.price}.00 AUD</h2></div>
+                    <div id='shoe-name'>
+                        <h1>{shoe.name}</h1><h2>${shoe.price}.00 AUD</h2>
+                        <div id='absol-joiner-left'></div>
+                        <div id='absol-joiner-right'></div>
+                        </div>
                     <div id='description'><p>{shoe.description}</p></div>
                     <div id='checkout'>
                         <div id='checkout-flex-container'>

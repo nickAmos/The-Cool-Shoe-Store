@@ -41,8 +41,11 @@
 #text-section {
     height: 80%;
     padding-left: 15px;
-    width: 70%;
-    
+    width: 70%;   
+}
+
+#text-link {
+    color: #494F55;
 }
 
 #name-exit {
