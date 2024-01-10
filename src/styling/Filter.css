@@ -1,30 +1,149 @@
+#title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+#line-break {
+    height: 3px;
+    background-color: #494F55;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    width: 100%;
+}
 
+#title-container h1 {
+    font-family: 'Kumbh Sans', sans-serif;
+    font-weight: 500;
+    color: #494F55;
+}
+
+
+
+#filter-container-flex-controller {
+    
+    height: 90%;
+    
+}
+
+#brand-type-spllit {
+    display: flex;
+    height: 40%;
+}
+
+#brand-container {
+    
+    width: 50%;
+}
+
+#type-container {
+    
+    width: 50%;
+}
+
+#description-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#description-container p {
+    font-size: 1.2rem;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-weight: 300;
+}
+
+#flex-child-buttons {
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-evenly ;
+}
+
+#button-container-filter {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#unchecked-button, #checked-button, #unchecked-button-search, #checked-button-search {
+  width: 80%;
+}
+
+#unchecked-button {
+    background-color: white;
+    border: #494F55 solid 2px;
+
+}
+
+#checked-button {
+    background-color:#494F55 ;
+    border: #494F55 solid 2px;
+    color: white;
+
+}
+
+#flex-child-price {
+    
+    height: 30%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#flex-child-search {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+#unchecked-button-search, #checked-button-search  {
+    border: #494F55 solid 2px;
+    background-color: #494F55;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+/* 
 
 #filter-container {
     background-color: rgb(255, 255, 255);
     width: 100%;
-    height: 80%;
+    height: 90%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 #filter-container-flex-controller {
     display: flex;
-    height: 100%;
+    height: 90%;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
 }
 
-#button-container {
-    display: flex;
-    align-items: center;
-}
+
 
 #flex-child-buttons {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    align-items:center;
     width: 100%;
 }
 
@@ -32,6 +151,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    padding-right: 30px;
     height: 80px;
     justify-content: flex-end;
 }
@@ -51,7 +171,14 @@
     justify-content: center;
 }
 
+#checked-button {
+    background-color: #494F55;
+    color: white;
+    margin: 0;
+}
 
-
-
-
+#unchecked-button {
+    background-color: aliceblue;
+    color: #494F55;
+    margin: 0;
+} */

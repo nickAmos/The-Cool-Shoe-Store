@@ -2,6 +2,7 @@
 #display-container {
     display: flex;
     justify-content: center;
+    background-color: aliceblue;
 }
 
 .grid-container {
@@ -18,4 +19,8 @@
 
 #container {
     height: 300px;
+
 }
+
+
+

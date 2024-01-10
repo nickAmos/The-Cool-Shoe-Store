@@ -33,7 +33,7 @@ h2 {
 #scrolling-banner {
     height: 30%;
     width: 100%;
-    background-color: aliceblue
+    background-color: rgb(255, 255, 255)
     
 }
 
@@ -122,26 +122,35 @@ span {
     bottom: 0;
     height: 10%;
     width: 100%;
-    border-top: black solid 1px;
+    border: #494F55 solid 2px;
     display: flex;
     justify-content: center;
-    background-color: rgb(255, 255, 255);
+    border-radius: 7.5px;
+    background-color: aliceblue;
 }
 
 #cartdisplay-container {
+    
     overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     height: 90%;
 }
 
-#subtotal-container, #checkout-button-container {
+#subtotal-container-ch, #checkout-button-container {
     width: 50%;
     align-items: center;
     display: flex;
 }
 
-#subtotal-container {
+#subtotal-container-ch {
     justify-content: center;
+    font-family: 'Kumbh Sans', sans-serif;
+    color: #494F55;
+    font-size: 1.1rem;
 }
 
 #checkout-button-container {
@@ -150,6 +159,10 @@ span {
 
 #checkout-button-container div {
     padding-right: 5px;
+
+}
+#checkout-button-cart {
+    background-color: #494F55
 }
 
 

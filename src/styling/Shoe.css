@@ -2,7 +2,8 @@
 #container-shoe {
     height: 100%;
     width: 100%;
-    border: 2px solid black;
+    border: 2px solid #494F55;
+    background-color: white;
     border-radius: 5px;
  }
 
@@ -37,8 +38,9 @@
 
 #shoeType {
     padding-left: 5px;
-    font-size: smaller;
-    color: rgba(0, 0, 0, 0.695);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #shoePrice {
@@ -53,10 +55,24 @@ img {
 }
 
 #brandLogo {
-    width: 85px;
+    width: 100px;
     display: flex;
-    justify-content: flex-end;
-    padding-right: 5px;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 15px;
+}
+
+#shoeName p {
+    font-family: 'Tektur', sans-serif;
+    font-weight: 400;
+    padding-left: 7px;
+    font-size: 1.1rem;
+}
+
+#brandLogo p, #shoePrice p {
+    font-family: 'Kumbh Sans', sans-serif;
+    font-weight: 300;
+    
 }
 
 

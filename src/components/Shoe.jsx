@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import '../styling/Shoe.css';
 import getShoe from './GetShoe';
+import {motion} from 'framer-motion';
 export default function Shoe({shoe, changeShoe}) {
 
     /*index is the position of the shoe in the display array
@@ -20,7 +21,7 @@ if (shoe.brand === 'Nike') {
     src = <img style={{width: 50}} src={require('../Images/adidasStretch.png')} alt='brandlogo' />
 
 } else if (shoe.brand === 'Saucony') {
-    src = <img style={{height: 15}} src={require('../Images/Saucony.png')} alt='brandlogo' />
+    src = <img style={{height: 15, paddingRight: '5px'}} src={require('../Images/Saucony.png')} alt='brandlogo' />
 }
 
 
@@ -33,7 +34,14 @@ const handleClick = () => {
 
 
     return(
-        <div id='container-shoe' onClick={() => {handleClick()}}>
+        <motion.div id='container-shoe' onClick={() => {handleClick()}}
+        whileHover={{
+            scale: 1.05,
+            transition: { type: "spring",
+            stiffness: 260,
+            damping: 20 },
+          }}
+          whileTap={{ scale: 0.95 }}>
             <Link to='/SelectedShoe'>
             <div id="image-placeholder">
                 {image ? <div>{image}</div> : null}
@@ -42,16 +50,16 @@ const handleClick = () => {
             <div id='shoe-txt-container'>
                 <div id='nameAndBrand'>
                     <div id='shoeName'><p>{shoe.name}</p></div>
-                    <div id='brandLogo'>{shoe.type}</div>
+                    <div id='brandLogo'><p>{shoe.type}</p></div>
                 </div>
                 <div id='typeAndPrice'>
-                    <div id='shoeType'><p>{src}</p></div>
+                    <div id='shoeType'>{src}</div>
                     <div id='shoePrice'><p>{`$${shoe.price}.00 AUD`}</p></div>
             </div>
             </div>
 
             
             
-        </div>
+        </motion.div>
     )
 }

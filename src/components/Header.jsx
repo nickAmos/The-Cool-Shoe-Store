@@ -16,8 +16,8 @@ import CartDisplay from './CartDisplay';
 
 
 const styleFilter = {
-    position: 'absolute', top: '10%', padding: 0,
-    width: '30vw', height: '90vh', bgcolor: 'white', border: '2px solid #000', boxShadow: 24, p: 4,
+    position: 'absolute', top: '15%', padding: 0, bgcolor: 'aliceblue',
+    width: '30vw', height: '75vh', border: '2px solid #000', boxShadow: 24, p: 4,
     borderRadius: 5, borderTopLeftRadius: 0, borderBottomLeftRadius: 0
   };
 
@@ -104,12 +104,12 @@ const handleCloseCart = () => setOpenCart(false);
                                         </div>
 
                                         <div id='checkout-container'>
-                                            <div id='subtotal-container'> 
+                                            <div id='subtotal-container-ch'> 
                                                 <p>Subtotal: <b>${subtotal}.00 AUD</b></p>
                                             </div>
                                             <div id='checkout-button-container'>
                                                 <Link to='/checkout'>
-                                                    <div><Button compact circular color='black'>Checkout</Button></div>
+                                                    <div><Button id="checkout-button-cart"compact circular color='black'>Checkout</Button></div>
                                                 </Link>
                                             </div>
                                             

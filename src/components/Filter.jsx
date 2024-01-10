@@ -14,47 +14,10 @@ export default function Filter({onSubmit, onClose}) {
     const [brand, setBrand] = useState(null);
     const [type, setType] = useState(null);
     const [maxPrice, setMaxPrice] = useState(null);
+    
 
-    const [nikeColor, setNikeColor] = useState('black')
-    const [adidasColor, setAdidasColor] = useState('black')
-    const [saucanyColor, setSaucanyColor] = useState('black')
-    const [dailyColor, setDailyColor] = useState('black');
-    const [raceColor, setRaceColor] = useState('black');
     const [disabled, setDisabled] = useState(null);
 
-  useEffect(() => {
-    if (brand === 'Nike') {
-      setNikeColor('teal')
-    }else {
-        setNikeColor('black');
-      }
-
-    if (brand === 'Saucony') {
-      setSaucanyColor('teal');
-    } else {
-      setSaucanyColor('black');
-    }
-
-     if (brand === 'Adidas') {
-      setAdidasColor('teal');
-    } else {
-      setAdidasColor('black');
-    }
-  },[brand])
-
-  useEffect(() => {
-    if (type === 'Daily Trainer') {
-      setDailyColor('teal')
-    }else {
-        setDailyColor('black');
-      }
-
-    if (type === 'Race Shoe') {
-      setRaceColor('teal');
-    } else {
-      setRaceColor('black');
-    }
-  },[type])
 
   useEffect(() => {
     if (maxPrice < 0 || maxPrice > 1000) {
@@ -104,7 +67,7 @@ export default function Filter({onSubmit, onClose}) {
       }
     };
 
-    const handelSaucany = () => {
+    const handelSaucony = () => {
       if (brand !== 'Saucony') {
         setBrand('Saucony');
 
@@ -128,6 +91,14 @@ export default function Filter({onSubmit, onClose}) {
         setType(null);
       }
     }
+
+    const handelBoth = () => {
+      if (type !== 'Both') {
+        setType('Both') 
+      } else if (type === 'Both') {
+        setType(null);
+      }
+    }
   
 
     // Example: Filter by Nike, Blue color, and max price of 400
@@ -137,38 +108,88 @@ export default function Filter({onSubmit, onClose}) {
     return(
       <>
         <div id="title-container">
-            <h1>Refine your choice.</h1>
+            <h1>Refine your choice</h1>
+            <div id="line-break"></div>
          </div>
       <div id="filter-container-flex-controller">
-        <div id="filter-container">
+        <div id="brand-type-spllit">
 
+        <div id="brand-container">
+
+          <div id="description-container">
+              <p>Brand</p>
+          </div>
           <div id="flex-child-buttons">
-            <div id="button-container">
-                <Button basic color={nikeColor}  onClick={() => handelNike()}>Nike</Button>
-                
+            <div id="button-container-filter">
+                {(brand === 'Nike') ? 
+                <Button id="checked-button"  onClick={() => handelNike()}>Nike</Button> 
+                :
+                <Button id="unchecked-button"  onClick={() => handelNike()}>Nike</Button> }
             </div>
 
-            <div id="button-container">
-              <Button basic color={adidasColor} onClick={() => handelAdidas()}>Adidas </Button>
-              
+            <div id="button-container-filter">
+                {(brand === 'Adidas') ? 
+                <Button id="checked-button"  onClick={() => handelAdidas()}>Adidas</Button> 
+                :
+                <Button id="unchecked-button"  onClick={() => handelAdidas()}>Adidas</Button> }
             </div>
 
-            <div id="button-container">
-              <Button basic color={saucanyColor} onClick={() => handelSaucany()}>Saucany </Button>
-              
+            <div id="button-container-filter">
+                {(brand === 'Saucony') ? 
+                <Button id="checked-button"  onClick={() => handelSaucony()}>Saucony</Button> 
+                :
+                <Button id="unchecked-button"  onClick={() => handelSaucony()}>Saucony</Button> }
             </div>
+
+        </div>
         </div>
 
+  
+        
+        <div id="type-container">
+        <div id="description-container">
+              <p>Type</p>
+          </div>
         <div id="flex-child-buttons">
-          <div id="button-container">
-              <Button Button basic color={dailyColor} onClick={() => handelDaily()}>Daily Trainer</Button>
+          <div id="button-container-filter">
+            {(type === "Daily Trainer") ?
+             <Button id="checked-button" onClick={() => handelDaily()}>Daily Trainer</Button>
+             : 
+            <Button id="unchecked-button" onClick={() => handelDaily()}>Daily Trainer</Button>
+             }
+             
               
           </div>
-          <div id="button-container">
-            <Button id="test" Button basic color={raceColor} onClick={() => handelRace()}>Race Shoe</Button>
+          <div id="button-container-filter">
+            {(type === "Race Shoe") ? 
+            <Button id="checked-button" onClick={() => handelRace()}>Race Shoe</Button>
+            :
+            <Button id="unchecked-button" onClick={() => handelRace()}>Race Shoe</Button>
+            }
+            
 
           </div>
+
+          <div id="button-container-filter">
+            {(type === "Both") ? 
+            <Button id="checked-button" onClick={() => handelBoth()}>Both</Button>
+            :
+            <Button id="unchecked-button" onClick={() => handelBoth()}>Both</Button>
+            }
+            
+
+          </div>
+        
         </div>
+        </div>
+
+        
+        </div>
+        <div id="title-container">
+            <h1>Select price point</h1>
+            <div id="line-break"></div>
+         </div>
+
 
         <div id="flex-child-price">
           {disabled ? <Label basic color='red' pointing='below'>Please enter a value between 0 - 1000</Label> : null}
@@ -179,13 +200,14 @@ export default function Filter({onSubmit, onClose}) {
           </Input>
         </div>
 
+        
+
           <div id="flex-child-search">
-            {((brand === null && type === null && maxPrice === null) || disabled) ? <Button disabled> Search </Button> :<Button color="teal"  onClick={() => {filterShoes(brand, type, maxPrice)
+            {((brand === null && type === null && maxPrice === null) || disabled) ? <Button disabled id="unchecked-button-search"> Search </Button> :<Button id="checked-button-search"  onClick={() => {filterShoes(brand, type, maxPrice)
             onClose();
             }}>Search</Button>}
           </div>
 
-        </div>
         </div>
 
         </>
