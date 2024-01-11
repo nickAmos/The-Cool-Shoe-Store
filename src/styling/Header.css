@@ -165,6 +165,35 @@ span {
     background-color: #494F55
 }
 
+#styleFilter {
+    position: absolute;
+    top: 15%;
+    padding: 0;
+    background-color: aliceblue;
+    width: 30vw;
+    height: 75vh;
+    border: 2px solid black;
+    box-shadow: 24;
+    border-radius: 5px;
+    border-bottom-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+#styleCart {
+    position: absolute;
+    top: 10%;
+    right: 0;
+    padding: 0;
+    background-color: white;
+    width: 30vw;
+    height: 90vh;
+    border: 2px solid black;
+    box-shadow: 24;
+    border-radius: 5px;
+    border-bottom-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
 
 
 
@@ -177,6 +206,84 @@ span {
         transform: translateX(-100%);
     }
 }
+
+
+/* Resposivness 
+
+720 header collapse*/
+
+@media only screen and (max-width: 1300px) {
+    #styleFilter {
+        width: 50vw;
+        height: 100vh;
+        top: 0;
+    }
+    #styleCart {
+        width: 50vw;
+        height: 100vh;
+        top: 0;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    #middle-box {
+    display: none;
+    }
+}
+
+@media only screen and (min-width: 720px) {
+    #middle-box-logo {
+    display: none;
+    }
+}
+
+@media only screen and (max-width: 1313px) {
+    #right-left-middle, #right-left-LHS {
+        font-size: 1.5rem;
+    }
+
+}
+
+@media only screen and (max-width: 1145px) {
+    #right-left-middle, #right-left-LHS {
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (max-width: 930px) {
+    #right-left-middle, #right-left-LHS {
+        font-size: 0.9rem;
+    }}
+
+    @media only screen and (max-width: 700px) {
+        #scrolling-banner {
+            display: none;
+        }
+        #header-container {
+            height: 10vh;
+        }
+        #navbar {
+            height: 100%;
+        }
+        #styleFilter {
+            width: 80vw;
+            height: 100vh;
+            top: 0;
+        }
+        #styleCart {
+            width: 80vw;
+            height: 100vh;
+            top: 0;
+        }
+
+    
+    }
+
+
+    
+
+
+
 
 
 

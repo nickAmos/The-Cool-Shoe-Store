@@ -15,11 +15,11 @@ import CartDisplay from './CartDisplay';
 
 
 
-const styleFilter = {
+/*const styleFilter = {
     position: 'absolute', top: '15%', padding: 0, bgcolor: 'aliceblue',
     width: '30vw', height: '75vh', border: '2px solid #000', boxShadow: 24, p: 4,
     borderRadius: 5, borderTopLeftRadius: 0, borderBottomLeftRadius: 0
-  };
+  }; */
 
 
 const styleCart = {
@@ -75,7 +75,7 @@ const handleCloseCart = () => setOpenCart(false);
                         }}>reset</Button> : null}
                         </div>
                             <Modal open={openFilter} onClose={handleCloseFilter} aria-labelledby="modal-modal-title" aria-describedby="modal-modal-description">  
-                                    <Box sx={styleFilter}>
+                                    <Box id='styleFilter'>
                                         <Filter onSubmit={getData} onClose={handleCloseFilter}/>
                                     </Box> 
                             </Modal> 
@@ -87,6 +87,9 @@ const handleCloseCart = () => setOpenCart(false);
                         <div id='middle-box'>
                             <h1>The Shoe Store</h1>
                         </div>
+                        <div id='middle-box-logo'>
+                            <h1>TSS</h1>
+                        </div>
                         <div id='right-box'>
                             <div className='icon-container' onClick={handleOpenCart}>
                                 <Button.Content visible>
@@ -97,7 +100,7 @@ const handleCloseCart = () => setOpenCart(false);
                                 </Button.Content>
                             </div>
                             <Modal open={openCart} onClose={handleCloseCart} aria-labelledby="modal-modal-title" aria-describedby="modal-modal-description">  
-                                    <Box sx={styleCart}>
+                                    <Box sx={styleCart} id='styleCart'>
                                         <div id='cart-container'>
                                         <div id='cartdisplay-container'>
                                             <CartDisplay cart={cart} filterCart={filterCart} changeShoe={changeShoe}/>
