@@ -64,6 +64,9 @@
     position: relative;
 }
 
+
+
+
 #absol-left-side, #absol-left-top, #absol-right-top, #absol-right-side {
     background-color: #494F55;
     position: absolute;
@@ -232,6 +235,7 @@
     font-family: 'Kumbh Sans', sans-serif;
     font-weight: 300;
     text-align:justify;
+    
 
 }
 #shoe-name {
@@ -324,7 +328,7 @@
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    background-color: rgb(255, 255, 255);
+    
 }
 
 #continue-shopping {
@@ -523,7 +527,138 @@
 
 
 #img-placeholder img {
-    max-width: 1000px;
-    aspect-ratio: auto;
+    max-width: 100%;
+    height: auto;
     
+}
+
+@media only screen and (max-width: 1600px) {
+    #description p {
+        font-size: 0.9rem;
+    }
+}
+
+
+@media only screen and (max-width: 1450px) {
+
+    #main-section {
+        height: 90vh;
+    }
+
+   
+
+    #main-flex-container {
+    flex-direction: column;
+    
+    height: 100%;
+    width: 1000px;
+    border-bottom: none;
+    }
+
+    #image-section {
+        flex-direction: row;
+        
+        width: 100%;
+
+    }
+
+    #img-container, #size-selection {
+        width: 50%;
+        height: 300px;
+    }
+
+    
+    #checkout {
+        height: 30%;
+        width: 80%;
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #description-section {
+        background-color: #e6e9ff;
+        width: 100%;
+        justify-content: space-between;
+    }
+    #checkout-flex-container {
+        width: 100%;
+    }
+    #checkout {
+        width: 100%;
+    }
+
+    #twobutton-container {
+        height: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    
+}
+
+@media only screen and (max-width: 1000px) {
+    #main-flex-container {
+    width: 800px;
+   
+    }
+    #middle-content p {
+        font-size: 0.8rem;
+    }
+    #selected-footer {
+        height: 100px;
+        
+    }
+    #reveal-wrapper {
+        width: 30%;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+    #description-section {
+        height: 400px;
+        
+    }
+    #description {
+        height: 400px;
+        align-items: flex-start;
+    }
+
+    #card-child {
+        width: 32%;
+    }
+    #card-container {
+        width: 90%;
+    }
+}
+
+
+@media only screen and (max-width: 800px) {
+    #button-div p {
+        width: 20px;
+        font-size: 0.8rem;
+    }
+    #button-div-button {
+        padding: 5px 10px 5px 10px;
+    }
+}
+
+
+@media only screen and (max-width: 800px) {
+    #main-section {
+        height: 110vh;
+    }
+    #description-section {
+        height: 400px;
+        
+    }
+    #description {
+        height: 600px;
+        align-items: flex-start;
+    }
+    #image-section {
+        height: 300px;
+    }
 }
