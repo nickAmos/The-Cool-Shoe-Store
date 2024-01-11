@@ -26,7 +26,8 @@ function ShoeDisplay({includedShoes, changeShoe}) {
                     )})}
         </div> : null}
 
-        {ArrayOfShoes.length === 0 ? <div>no shoes found</div> : null}
+        {ArrayOfShoes.length === 0 ? <div id='no-shoes'>
+          No shoes match your search.</div> : null}
 
       </div>
         </>

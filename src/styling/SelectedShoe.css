@@ -21,6 +21,36 @@
     background-color: #494F55;
 }
 
+#left-box-head, #right-box-head {
+    width: 150px;
+    height: 100%;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: white;
+}
+#left-box-head p{
+    padding-top: 3px;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+#right-box-head p {
+    margin: 0;
+    padding-top: 2px;
+    padding-right: 2px;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+#selected-header {
+    justify-content: space-between;
+}
+
 #selected-footer {
     background-color: aliceblue;
 }
@@ -337,7 +367,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: rgb(255, 243, 233);
+    color: rgb(255, 255, 255);
 }
 
 #TTS {

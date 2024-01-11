@@ -122,9 +122,17 @@ export default function Checkout({cart, filterCart, subtotal, changeShoe}) {
                     <div id="shipping-delivery">
                         <div id="shipping-title-delivery"><h2>Delivery Method</h2></div>
                         <div id="button-flexbox">
-                            <div id="toggle-button"><Button  toggle active={standard} onClick={() => handleStandard()}  >Standard</Button></div>
-                            <div id="toggle-button"><Button  toggle active={express} onClick={() => handleExpress()}  >Express</Button></div>
-                        </div>
+                            {standard ? 
+                            <div id="toggle-button"><Button id="toggle-button-active" onClick={() => handleStandard()} >Standard</Button></div>
+                            :
+                            <div id="toggle-button"><Button id="toggle-button-disabled" onClick={() => handleStandard()} >Standard</Button></div>
+                            }
+                            
+                            {express ? 
+                            <div id="toggle-button"><Button id="toggle-button-active" onClick={() => handleExpress()} >Express</Button></div>
+                            :
+                            <div id="toggle-button"><Button id="toggle-button-disabled" onClick={() => handleExpress()} >Express</Button></div>
+                            }                        </div>
                     </div>
 
                     <div id="shipping-checkout">

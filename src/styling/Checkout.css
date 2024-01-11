@@ -14,6 +14,11 @@
     width: 200px;
 }
 
+#home-arrow p {
+    font-family: 'Kumbh Sans', sans-serif;
+    font-weight: 300;
+}
+
 #home-container {
     height: 50px;
     margin-left: 25px;
@@ -452,6 +457,16 @@ h3 {
     font-family: 'Kumbh Sans', sans-serif;
     font-weight: 300;
 }
+
+#toggle-button-active {
+    background-color: aliceblue;
+    border: #494F55 solid 2px;
+}
+
+#toggle-button-disabled {
+    border: white solid 2px;
+}
+
 
 
 

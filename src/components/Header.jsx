@@ -85,7 +85,7 @@ const handleCloseCart = () => setOpenCart(false);
                             
                         </div>
                         <div id='middle-box'>
-                            <h1>The Shoe Store.</h1>
+                            <h1>The Shoe Store</h1>
                         </div>
                         <div id='right-box'>
                             <div className='icon-container' onClick={handleOpenCart}>

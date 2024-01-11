@@ -23,4 +23,15 @@
 }
 
 
+#no-shoes {
+    height: 24vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-weight: 300;
+    font-size: 1.4rem;
+}
+
 

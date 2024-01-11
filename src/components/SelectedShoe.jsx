@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import '../styling/SelectedShoe.css';
 import { Button, Icon, RevealContent, Reveal } from 'semantic-ui-react';
 import { useEffect, useState} from 'react';
@@ -13,6 +13,7 @@ import getShoe from './GetShoe';
 
 export default function SelectedShoe({shoe, pushCart, cart, changeShoe}) {
 
+    const navigation = useNavigate();
     const shoeName = shoe.name;
     const brand = shoe.brand;
     let image = getShoe(shoe.name, '1000px', '300px')
@@ -391,11 +392,26 @@ function handleShoeChange(newShoe) {
 
 }
 
+
+const handlePageChange = (direction) => {
+    if (direction === 'left') { 
+        navigation('/')
+    } else if (direction === 'right') {
+        navigation('/checkout');
+    }
+}
+
     return(
         <>
         <div id='selected-header'>
+            <div id='left-box-head' onClick={() => handlePageChange('left')}>
+                <Icon name='arrow alternate circle left outline'/><p>Return Home</p>
+            </div>
             <div id='header-flex-child'>
                 <h2 id='TTS'>TTS</h2>
+            </div>
+            <div id='right-box-head' onClick={() => handlePageChange('right')}>
+            <p>To Checkout</p><Icon name='arrow alternate circle right outline'/>
             </div>
         </div>
         <div id='main-section'>
