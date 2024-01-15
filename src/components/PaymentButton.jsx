@@ -15,7 +15,7 @@ export default function PaymentButton({color, paymentName, paymentIcon, txtColor
 
     const stylePayment = {
         position: 'absolute', top: '50%', left: '50%', padding: 0, marginLeft:'-500px', marginTop: '-300px',
-        width: '1000px', height: '600px', bgcolor: 'white', border: '2px solid #000', boxShadow: 24, p: 4
+        width: '1000px', height: '600px', bgcolor: 'white', border: '2px solid #000', boxShadow: 24, p: 4, overflowY: 'auto'
       };
 
     const handleLoading = () => {

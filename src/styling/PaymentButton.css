@@ -105,3 +105,32 @@ strong {
     align-items: center;
     justify-content: space-between;
 }
+
+
+@media only screen and (max-width: 1000px) {
+    #button-container {
+        width: 130px;
+}
+#txt-comp {
+    font-size: smaller  ;
+}}
+
+
+
+@media only screen and (max-width: 850px) {
+    #button-container {
+        width: 100px;
+}
+}
+
+@media only screen and (max-width: 685px) {
+    #txt-comp {
+        display: none;
+    }
+    #button-container {
+        justify-content: center;
+    }
+    #icon-comp {
+        padding: 0;
+    }
+}
